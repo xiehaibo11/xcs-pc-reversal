@@ -1,0 +1,311 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>xcs</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="BouncyCastle.Cryptography.dll" />
+    <None Remove="CommonServiceLocator.dll" />
+    <None Remove="GalaSoft.MvvmLight.dll" />
+    <None Remove="GalaSoft.MvvmLight.Extras.dll" />
+    <None Remove="GalaSoft.MvvmLight.Platform.dll" />
+    <None Remove="Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.Ini.dll" />
+    <None Remove="Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <None Remove="Microsoft.Extensions.FileProviders.Physical.dll" />
+    <None Remove="Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <None Remove="Microsoft.Extensions.Primitives.dll" />
+    <None Remove="Newtonsoft.Json.dll" />
+    <None Remove="System.Buffers.dll" />
+    <None Remove="System.Memory.dll" />
+    <None Remove="System.Numerics.Vectors.dll" />
+    <None Remove="System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Remove="System.Threading.Tasks.Extensions.dll" />
+    <None Remove="System.ValueTuple.dll" />
+    <None Remove="System.Windows.Interactivity.dll" />
+    <None Remove="websocket-sharp.dll" />
+    <EmbeddedResource Include="BouncyCastle.Cryptography.dll" LogicalName="BouncyCastle.Cryptography.dll" />
+    <EmbeddedResource Include="CommonServiceLocator.dll" LogicalName="CommonServiceLocator.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.dll" LogicalName="GalaSoft.MvvmLight.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.Extras.dll" LogicalName="GalaSoft.MvvmLight.Extras.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.Platform.dll" LogicalName="GalaSoft.MvvmLight.Platform.dll" />
+    <EmbeddedResource Include="Microsoft.Bcl.AsyncInterfaces.dll" LogicalName="Microsoft.Bcl.AsyncInterfaces.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.Abstractions.dll" LogicalName="Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.dll" LogicalName="Microsoft.Extensions.Configuration.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.FileExtensions.dll" LogicalName="Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.Ini.dll" LogicalName="Microsoft.Extensions.Configuration.Ini.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileProviders.Abstractions.dll" LogicalName="Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileProviders.Physical.dll" LogicalName="Microsoft.Extensions.FileProviders.Physical.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileSystemGlobbing.dll" LogicalName="Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Primitives.dll" LogicalName="Microsoft.Extensions.Primitives.dll" />
+    <EmbeddedResource Include="Newtonsoft.Json.dll" LogicalName="Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="System.Buffers.dll" LogicalName="System.Buffers.dll" />
+    <EmbeddedResource Include="System.Memory.dll" LogicalName="System.Memory.dll" />
+    <EmbeddedResource Include="System.Numerics.Vectors.dll" LogicalName="System.Numerics.Vectors.dll" />
+    <EmbeddedResource Include="System.Runtime.CompilerServices.Unsafe.dll" LogicalName="System.Runtime.CompilerServices.Unsafe.dll" />
+    <EmbeddedResource Include="System.Threading.Tasks.Extensions.dll" LogicalName="System.Threading.Tasks.Extensions.dll" />
+    <EmbeddedResource Include="System.ValueTuple.dll" LogicalName="System.ValueTuple.dll" />
+    <EmbeddedResource Include="System.Windows.Interactivity.dll" LogicalName="System.Windows.Interactivity.dll" />
+    <EmbeddedResource Include="websocket-sharp.dll" LogicalName="websocket-sharp.dll" />
+    <ApplicationDefinition Remove="distinguish/App.xaml" />
+    <ApplicationDefinition Include="distinguish/App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="distinguish/EditPwdWindow.xaml" />
+    <Page Remove="distinguish/ErrorWindow.xaml" />
+    <Page Remove="distinguish/HomeWindow.xaml" />
+    <Page Remove="distinguish/MainWindow.xaml" />
+    <Page Remove="distinguish/OnlineWindows.xaml" />
+    <Page Remove="distinguish/PreviewSettingWindow.xaml" />
+    <Page Remove="distinguish/PreviewWindow.xaml" />
+    <Page Remove="distinguish/VerifyPwdWindow.xaml" />
+    <Page Include="distinguish/EditPwdWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="editpwdwindow.xaml" />
+    <Page Include="distinguish/ErrorWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="errorwindow.xaml" />
+    <Page Include="distinguish/HomeWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="homewindow.xaml" />
+    <Page Include="distinguish/MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="loginwindow.xaml" />
+    <Page Include="distinguish/OnlineWindows.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="onlinewindows.xaml" />
+    <Page Include="distinguish/PreviewSettingWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="previewsettingwindow.xaml" />
+    <Page Include="distinguish/PreviewWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="previewwindow.xaml" />
+    <Page Include="distinguish/VerifyPwdWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="verifypwdwindow.xaml" />
+    <Resource Remove="000.ico" />
+    <Resource Remove="cq_favicon.ico" />
+    <Resource Remove="cs.ico" />
+    <Resource Remove="favicon.ico" />
+    <Resource Remove="jyz_favicon.ico" />
+    <Resource Remove="res/bottom_bg.jpg" />
+    <Resource Remove="res/login_bg.png" />
+    <Resource Remove="res/login_but.png" />
+    <Resource Remove="res/login_but_ing.png" />
+    <Resource Remove="res/login_reset.png" />
+    <Resource Remove="res/other/baida.jpg" />
+    <Resource Remove="res/other/bei.jpg" />
+    <Resource Remove="res/other/chun.jpg" />
+    <Resource Remove="res/other/dong.jpg" />
+    <Resource Remove="res/other/dong_1.jpg" />
+    <Resource Remove="res/other/empty.jpg" />
+    <Resource Remove="res/other/fa.jpg" />
+    <Resource Remove="res/other/ju.jpg" />
+    <Resource Remove="res/other/kuang.jpg" />
+    <Resource Remove="res/other/lan.jpg" />
+    <Resource Remove="res/other/lan_1.jpg" />
+    <Resource Remove="res/other/mei.jpg" />
+    <Resource Remove="res/other/qiu.jpg" />
+    <Resource Remove="res/other/x.jpg" />
+    <Resource Remove="res/other/xi.jpg" />
+    <Resource Remove="res/other/xia.jpg" />
+    <Resource Remove="res/other/zhong.jpg" />
+    <Resource Remove="res/other/zhu.jpg" />
+    <Resource Remove="res/sucai/50/1.png" />
+    <Resource Remove="res/sucai/50/2.png" />
+    <Resource Remove="res/sucai/50/3.png" />
+    <Resource Remove="res/sucai/50/4.png" />
+    <Resource Remove="res/sucai/50/5.png" />
+    <Resource Remove="res/sucai/50/6.png" />
+    <Resource Remove="res/sucai/50/7.png" />
+    <Resource Remove="res/sucai/50/8.png" />
+    <Resource Remove="res/sucai/hua/1.png" />
+    <Resource Remove="res/sucai/hua/2.png" />
+    <Resource Remove="res/sucai/hua/3.png" />
+    <Resource Remove="res/sucai/hua/4.png" />
+    <Resource Remove="res/sucai/hua/5.png" />
+    <Resource Remove="res/sucai/hua/6.png" />
+    <Resource Remove="res/sucai/hua/7.png" />
+    <Resource Remove="res/sucai/hua/8.png" />
+    <Resource Remove="res/sucai/tiao/1.png" />
+    <Resource Remove="res/sucai/tiao/2.png" />
+    <Resource Remove="res/sucai/tiao/3.png" />
+    <Resource Remove="res/sucai/tiao/4.png" />
+    <Resource Remove="res/sucai/tiao/5.png" />
+    <Resource Remove="res/sucai/tiao/6.png" />
+    <Resource Remove="res/sucai/tiao/7.png" />
+    <Resource Remove="res/sucai/tiao/8.png" />
+    <Resource Remove="res/sucai/tiao/9.png" />
+    <Resource Remove="res/sucai/tong/1.png" />
+    <Resource Remove="res/sucai/tong/2.png" />
+    <Resource Remove="res/sucai/tong/3.png" />
+    <Resource Remove="res/sucai/tong/4.png" />
+    <Resource Remove="res/sucai/tong/5.png" />
+    <Resource Remove="res/sucai/tong/6.png" />
+    <Resource Remove="res/sucai/tong/7.png" />
+    <Resource Remove="res/sucai/tong/8.png" />
+    <Resource Remove="res/sucai/tong/9.png" />
+    <Resource Remove="res/sucai/wan/1.png" />
+    <Resource Remove="res/sucai/wan/2.png" />
+    <Resource Remove="res/sucai/wan/3.png" />
+    <Resource Remove="res/sucai/wan/4.png" />
+    <Resource Remove="res/sucai/wan/5.png" />
+    <Resource Remove="res/sucai/wan/6.png" />
+    <Resource Remove="res/sucai/wan/7.png" />
+    <Resource Remove="res/sucai/wan/8.png" />
+    <Resource Remove="res/sucai/wan/9.png" />
+    <Resource Remove="res/sucai/zi/1.png" />
+    <Resource Remove="res/sucai/zi/2.png" />
+    <Resource Remove="res/sucai/zi/3.png" />
+    <Resource Remove="res/sucai/zi/4.png" />
+    <Resource Remove="res/sucai/zi/5.png" />
+    <Resource Remove="res/sucai/zi/6.png" />
+    <Resource Remove="res/sucai/zi/7.png" />
+    <Resource Remove="res/tiao/1.jpg" />
+    <Resource Remove="res/tiao/2.jpg" />
+    <Resource Remove="res/tiao/3.jpg" />
+    <Resource Remove="res/tiao/4.jpg" />
+    <Resource Remove="res/tiao/5.jpg" />
+    <Resource Remove="res/tiao/6.jpg" />
+    <Resource Remove="res/tiao/7.jpg" />
+    <Resource Remove="res/tiao/8.jpg" />
+    <Resource Remove="res/tiao/9.jpg" />
+    <Resource Remove="res/tong/1.jpg" />
+    <Resource Remove="res/tong/2.jpg" />
+    <Resource Remove="res/tong/3.jpg" />
+    <Resource Remove="res/tong/4.jpg" />
+    <Resource Remove="res/tong/5.jpg" />
+    <Resource Remove="res/tong/6.jpg" />
+    <Resource Remove="res/tong/7.jpg" />
+    <Resource Remove="res/tong/8.jpg" />
+    <Resource Remove="res/tong/9.jpg" />
+    <Resource Remove="res/top_bg.jpg" />
+    <Resource Remove="res/wan/1.jpg" />
+    <Resource Remove="res/wan/2.jpg" />
+    <Resource Remove="res/wan/3.jpg" />
+    <Resource Remove="res/wan/4.jpg" />
+    <Resource Remove="res/wan/5.jpg" />
+    <Resource Remove="res/wan/6.jpg" />
+    <Resource Remove="res/wan/7.jpg" />
+    <Resource Remove="res/wan/8.jpg" />
+    <Resource Remove="res/wan/9.jpg" />
+    <Resource Remove="xincaisheng_favicon.ico" />
+    <Resource Include="000.ico" LogicalName="000.ico" />
+    <Resource Include="cq_favicon.ico" LogicalName="cq_favicon.ico" />
+    <Resource Include="cs.ico" LogicalName="cs.ico" />
+    <Resource Include="favicon.ico" LogicalName="favicon.ico" />
+    <Resource Include="jyz_favicon.ico" LogicalName="jyz_favicon.ico" />
+    <Resource Include="res/bottom_bg.jpg" LogicalName="res/bottom_bg.jpg" />
+    <Resource Include="res/login_bg.png" LogicalName="res/login_bg.png" />
+    <Resource Include="res/login_but.png" LogicalName="res/login_but.png" />
+    <Resource Include="res/login_but_ing.png" LogicalName="res/login_but_ing.png" />
+    <Resource Include="res/login_reset.png" LogicalName="res/login_reset.png" />
+    <Resource Include="res/other/baida.jpg" LogicalName="res/other/baida.jpg" />
+    <Resource Include="res/other/bei.jpg" LogicalName="res/other/bei.jpg" />
+    <Resource Include="res/other/chun.jpg" LogicalName="res/other/chun.jpg" />
+    <Resource Include="res/other/dong.jpg" LogicalName="res/other/dong.jpg" />
+    <Resource Include="res/other/dong_1.jpg" LogicalName="res/other/dong_1.jpg" />
+    <Resource Include="res/other/empty.jpg" LogicalName="res/other/empty.jpg" />
+    <Resource Include="res/other/fa.jpg" LogicalName="res/other/fa.jpg" />
+    <Resource Include="res/other/ju.jpg" LogicalName="res/other/ju.jpg" />
+    <Resource Include="res/other/kuang.jpg" LogicalName="res/other/kuang.jpg" />
+    <Resource Include="res/other/lan.jpg" LogicalName="res/other/lan.jpg" />
+    <Resource Include="res/other/lan_1.jpg" LogicalName="res/other/lan_1.jpg" />
+    <Resource Include="res/other/mei.jpg" LogicalName="res/other/mei.jpg" />
+    <Resource Include="res/other/qiu.jpg" LogicalName="res/other/qiu.jpg" />
+    <Resource Include="res/other/x.jpg" LogicalName="res/other/x.jpg" />
+    <Resource Include="res/other/xi.jpg" LogicalName="res/other/xi.jpg" />
+    <Resource Include="res/other/xia.jpg" LogicalName="res/other/xia.jpg" />
+    <Resource Include="res/other/zhong.jpg" LogicalName="res/other/zhong.jpg" />
+    <Resource Include="res/other/zhu.jpg" LogicalName="res/other/zhu.jpg" />
+    <Resource Include="res/sucai/50/1.png" LogicalName="res/sucai/50/1.png" />
+    <Resource Include="res/sucai/50/2.png" LogicalName="res/sucai/50/2.png" />
+    <Resource Include="res/sucai/50/3.png" LogicalName="res/sucai/50/3.png" />
+    <Resource Include="res/sucai/50/4.png" LogicalName="res/sucai/50/4.png" />
+    <Resource Include="res/sucai/50/5.png" LogicalName="res/sucai/50/5.png" />
+    <Resource Include="res/sucai/50/6.png" LogicalName="res/sucai/50/6.png" />
+    <Resource Include="res/sucai/50/7.png" LogicalName="res/sucai/50/7.png" />
+    <Resource Include="res/sucai/50/8.png" LogicalName="res/sucai/50/8.png" />
+    <Resource Include="res/sucai/hua/1.png" LogicalName="res/sucai/hua/1.png" />
+    <Resource Include="res/sucai/hua/2.png" LogicalName="res/sucai/hua/2.png" />
+    <Resource Include="res/sucai/hua/3.png" LogicalName="res/sucai/hua/3.png" />
+    <Resource Include="res/sucai/hua/4.png" LogicalName="res/sucai/hua/4.png" />
+    <Resource Include="res/sucai/hua/5.png" LogicalName="res/sucai/hua/5.png" />
+    <Resource Include="res/sucai/hua/6.png" LogicalName="res/sucai/hua/6.png" />
+    <Resource Include="res/sucai/hua/7.png" LogicalName="res/sucai/hua/7.png" />
+    <Resource Include="res/sucai/hua/8.png" LogicalName="res/sucai/hua/8.png" />
+    <Resource Include="res/sucai/tiao/1.png" LogicalName="res/sucai/tiao/1.png" />
+    <Resource Include="res/sucai/tiao/2.png" LogicalName="res/sucai/tiao/2.png" />
+    <Resource Include="res/sucai/tiao/3.png" LogicalName="res/sucai/tiao/3.png" />
+    <Resource Include="res/sucai/tiao/4.png" LogicalName="res/sucai/tiao/4.png" />
+    <Resource Include="res/sucai/tiao/5.png" LogicalName="res/sucai/tiao/5.png" />
+    <Resource Include="res/sucai/tiao/6.png" LogicalName="res/sucai/tiao/6.png" />
+    <Resource Include="res/sucai/tiao/7.png" LogicalName="res/sucai/tiao/7.png" />
+    <Resource Include="res/sucai/tiao/8.png" LogicalName="res/sucai/tiao/8.png" />
+    <Resource Include="res/sucai/tiao/9.png" LogicalName="res/sucai/tiao/9.png" />
+    <Resource Include="res/sucai/tong/1.png" LogicalName="res/sucai/tong/1.png" />
+    <Resource Include="res/sucai/tong/2.png" LogicalName="res/sucai/tong/2.png" />
+    <Resource Include="res/sucai/tong/3.png" LogicalName="res/sucai/tong/3.png" />
+    <Resource Include="res/sucai/tong/4.png" LogicalName="res/sucai/tong/4.png" />
+    <Resource Include="res/sucai/tong/5.png" LogicalName="res/sucai/tong/5.png" />
+    <Resource Include="res/sucai/tong/6.png" LogicalName="res/sucai/tong/6.png" />
+    <Resource Include="res/sucai/tong/7.png" LogicalName="res/sucai/tong/7.png" />
+    <Resource Include="res/sucai/tong/8.png" LogicalName="res/sucai/tong/8.png" />
+    <Resource Include="res/sucai/tong/9.png" LogicalName="res/sucai/tong/9.png" />
+    <Resource Include="res/sucai/wan/1.png" LogicalName="res/sucai/wan/1.png" />
+    <Resource Include="res/sucai/wan/2.png" LogicalName="res/sucai/wan/2.png" />
+    <Resource Include="res/sucai/wan/3.png" LogicalName="res/sucai/wan/3.png" />
+    <Resource Include="res/sucai/wan/4.png" LogicalName="res/sucai/wan/4.png" />
+    <Resource Include="res/sucai/wan/5.png" LogicalName="res/sucai/wan/5.png" />
+    <Resource Include="res/sucai/wan/6.png" LogicalName="res/sucai/wan/6.png" />
+    <Resource Include="res/sucai/wan/7.png" LogicalName="res/sucai/wan/7.png" />
+    <Resource Include="res/sucai/wan/8.png" LogicalName="res/sucai/wan/8.png" />
+    <Resource Include="res/sucai/wan/9.png" LogicalName="res/sucai/wan/9.png" />
+    <Resource Include="res/sucai/zi/1.png" LogicalName="res/sucai/zi/1.png" />
+    <Resource Include="res/sucai/zi/2.png" LogicalName="res/sucai/zi/2.png" />
+    <Resource Include="res/sucai/zi/3.png" LogicalName="res/sucai/zi/3.png" />
+    <Resource Include="res/sucai/zi/4.png" LogicalName="res/sucai/zi/4.png" />
+    <Resource Include="res/sucai/zi/5.png" LogicalName="res/sucai/zi/5.png" />
+    <Resource Include="res/sucai/zi/6.png" LogicalName="res/sucai/zi/6.png" />
+    <Resource Include="res/sucai/zi/7.png" LogicalName="res/sucai/zi/7.png" />
+    <Resource Include="res/tiao/1.jpg" LogicalName="res/tiao/1.jpg" />
+    <Resource Include="res/tiao/2.jpg" LogicalName="res/tiao/2.jpg" />
+    <Resource Include="res/tiao/3.jpg" LogicalName="res/tiao/3.jpg" />
+    <Resource Include="res/tiao/4.jpg" LogicalName="res/tiao/4.jpg" />
+    <Resource Include="res/tiao/5.jpg" LogicalName="res/tiao/5.jpg" />
+    <Resource Include="res/tiao/6.jpg" LogicalName="res/tiao/6.jpg" />
+    <Resource Include="res/tiao/7.jpg" LogicalName="res/tiao/7.jpg" />
+    <Resource Include="res/tiao/8.jpg" LogicalName="res/tiao/8.jpg" />
+    <Resource Include="res/tiao/9.jpg" LogicalName="res/tiao/9.jpg" />
+    <Resource Include="res/tong/1.jpg" LogicalName="res/tong/1.jpg" />
+    <Resource Include="res/tong/2.jpg" LogicalName="res/tong/2.jpg" />
+    <Resource Include="res/tong/3.jpg" LogicalName="res/tong/3.jpg" />
+    <Resource Include="res/tong/4.jpg" LogicalName="res/tong/4.jpg" />
+    <Resource Include="res/tong/5.jpg" LogicalName="res/tong/5.jpg" />
+    <Resource Include="res/tong/6.jpg" LogicalName="res/tong/6.jpg" />
+    <Resource Include="res/tong/7.jpg" LogicalName="res/tong/7.jpg" />
+    <Resource Include="res/tong/8.jpg" LogicalName="res/tong/8.jpg" />
+    <Resource Include="res/tong/9.jpg" LogicalName="res/tong/9.jpg" />
+    <Resource Include="res/top_bg.jpg" LogicalName="res/top_bg.jpg" />
+    <Resource Include="res/wan/1.jpg" LogicalName="res/wan/1.jpg" />
+    <Resource Include="res/wan/2.jpg" LogicalName="res/wan/2.jpg" />
+    <Resource Include="res/wan/3.jpg" LogicalName="res/wan/3.jpg" />
+    <Resource Include="res/wan/4.jpg" LogicalName="res/wan/4.jpg" />
+    <Resource Include="res/wan/5.jpg" LogicalName="res/wan/5.jpg" />
+    <Resource Include="res/wan/6.jpg" LogicalName="res/wan/6.jpg" />
+    <Resource Include="res/wan/7.jpg" LogicalName="res/wan/7.jpg" />
+    <Resource Include="res/wan/8.jpg" LogicalName="res/wan/8.jpg" />
+    <Resource Include="res/wan/9.jpg" LogicalName="res/wan/9.jpg" />
+    <Resource Include="xincaisheng_favicon.ico" LogicalName="xincaisheng_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight"><HintPath>GalaSoft.MvvmLight.dll</HintPath></Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="BouncyCastle.Cryptography"><HintPath>BouncyCastle.Cryptography.dll</HintPath></Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions"><HintPath>Microsoft.Extensions.Configuration.Abstractions.dll</HintPath></Reference>
+    <Reference Include="websocket-sharp"><HintPath>websocket-sharp.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>Newtonsoft.Json.dll</HintPath></Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.Extensions.Configuration"><HintPath>Microsoft.Extensions.Configuration.dll</HintPath></Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Ini"><HintPath>Microsoft.Extensions.Configuration.Ini.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup><PackageReference Include="System.Drawing.Common" Version="8.0.10" /></ItemGroup>
+</Project>

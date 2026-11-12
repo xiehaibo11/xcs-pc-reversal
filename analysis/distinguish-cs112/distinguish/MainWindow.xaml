@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="distinguish.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:distinguish" Window.WindowStyle="None" Window.WindowStartupLocation="CenterScreen" Window.ResizeMode="NoResize" Control.Background="#00FFFFFF" Window.AllowsTransparency="True" Window.Title="客户端" FrameworkElement.Height="502" FrameworkElement.Width="540" Control.FontSize="14">
+  <Grid>
+    <Panel.Background>
+      <ImageBrush ImageSource="/res/login_bg.png" />
+    </Panel.Background>
+    <Grid Panel.Background="#00FFFFFF">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100" />
+        <RowDefinition />
+        <RowDefinition Height="80" />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0" FrameworkElement.Margin="477,42,30,0">
+        <Button FrameworkElement.Height="32" FrameworkElement.Width="32" Control.Background="#00FFFFFF" Control.BorderBrush="#00FFFFFF">
+          <FrameworkElement.Resources>
+            <ResourceDictionary>
+              <Style>
+                <Style.TargetType>
+                  <x:TypeExtension>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Border</Ctor>
+                  </x:TypeExtension>
+                </Style.TargetType>
+                <Setter Property="Border.CornerRadius" Value="15" />
+                <Style.Triggers>
+                  <Trigger Property="UIElement.IsMouseOver" Value="True">
+                    <Setter Property="Border.Background" Value="#FFFF0000" />
+                    <Setter Property="UIElement.Opacity" Value="0.5" />
+                  </Trigger>
+                </Style.Triggers>
+                <x:Key>
+                  <x:TypeExtension>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Border</Ctor>
+                  </x:TypeExtension>
+                </x:Key>
+              </Style>
+            </ResourceDictionary>
+          </FrameworkElement.Resources>
+          <!--Unknown connection ID: 1-->
+        </Button>
+      </StackPanel>
+      <StackPanel Grid.Row="1" FrameworkElement.Width="320" FrameworkElement.Margin="0,30,0,0">
+        <Grid>
+          <UIElement.Visibility>
+            <Binding>
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsVisServer</Ctor>
+            </Binding>
+          </UIElement.Visibility>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" ContentControl.Content="口令地址：" Control.Foreground="#FFFFFFFF" FrameworkElement.VerticalAlignment="Center" />
+          <TextBox FrameworkElement.Name="ipAddrInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+            <TextBox.Text>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IpAddr</Ctor>
+              </Binding>
+            </TextBox.Text>
+            <FrameworkElement.Resources>
+              <ResourceDictionary>
+                <VisualBrush x:Key="HelpBrush" TileBrush.TileMode="None" Brush.Opacity="0.3" TileBrush.Stretch="None" TileBrush.AlignmentX="Left">
+                  <VisualBrush.Visual>
+                    <TextBlock FontStyle="Italic" Text="请输入口令地址" Foreground="#FFFFFFFF" FontSize="12" />
+                  </VisualBrush.Visual>
+                </VisualBrush>
+              </ResourceDictionary>
+            </FrameworkElement.Resources>
+            <FrameworkElement.Style>
+              <Style>
+                <Style.TargetType>
+                  <x:TypeExtension>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TextBox</Ctor>
+                  </x:TypeExtension>
+                </Style.TargetType>
+                <Style.Triggers>
+                  <Trigger Property="TextBox.Text">
+                    <Trigger.Value>
+                      <NullExtension />
+                    </Trigger.Value>
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                  <Trigger Property="TextBox.Text" Value="">
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkElement.Style>
+            <!--Unknown connection ID: 2-->
+          </TextBox>
+        </Grid>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" ContentControl.Content="用户名称：" Control.Foreground="#FFFFFFFF" FrameworkElement.VerticalAlignment="Center" />
+          <TextBox FrameworkElement.Name="userInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+            <TextBox.Text>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">UserName</Ctor>
+              </Binding>
+            </TextBox.Text>
+            <FrameworkElement.Resources>
+              <ResourceDictionary>
+                <VisualBrush x:Key="HelpBrush" TileBrush.TileMode="None" Brush.Opacity="0.3" TileBrush.Stretch="None" TileBrush.AlignmentX="Left">
+                  <VisualBrush.Visual>
+                    <TextBlock FontStyle="Italic" Text="请输入用户名称" Foreground="#FFFFFFFF" FontSize="12" />
+                  </VisualBrush.Visual>
+                </VisualBrush>
+              </ResourceDictionary>
+            </FrameworkElement.Resources>
+            <FrameworkElement.Style>
+              <Style>
+                <Style.TargetType>
+                  <x:TypeExtension>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TextBox</Ctor>
+                  </x:TypeExtension>
+                </Style.TargetType>
+                <Style.Triggers>
+                  <Trigger Property="TextBox.Text">
+                    <Trigger.Value>
+                      <NullExtension />
+                    </Trigger.Value>
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                  <Trigger Property="TextBox.Text" Value="">
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkElement.Style>
+            <!--Unknown connection ID: 3-->
+          </TextBox>
+        </Grid>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" ContentControl.Content="用户密码：" Control.Foreground="#FFFFFFFF" FrameworkElement.VerticalAlignment="Center" />
+          <TextBox FrameworkElement.Name="pwdInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+            <TextBox.Text>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Pwd</Ctor>
+              </Binding>
+            </TextBox.Text>
+            <FrameworkElement.Resources>
+              <ResourceDictionary>
+                <VisualBrush x:Key="HelpBrush" TileBrush.TileMode="None" Brush.Opacity="0.3" TileBrush.Stretch="None" TileBrush.AlignmentX="Left">
+                  <VisualBrush.Visual>
+                    <TextBlock FontStyle="Italic" Text="请输入用户密码" Foreground="#FFFFFFFF" FontSize="12" />
+                  </VisualBrush.Visual>
+                </VisualBrush>
+              </ResourceDictionary>
+            </FrameworkElement.Resources>
+            <FrameworkElement.Style>
+              <Style>
+                <Style.TargetType>
+                  <x:TypeExtension>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TextBox</Ctor>
+                  </x:TypeExtension>
+                </Style.TargetType>
+                <Style.Triggers>
+                  <Trigger Property="TextBox.Text">
+                    <Trigger.Value>
+                      <NullExtension />
+                    </Trigger.Value>
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                  <Trigger Property="TextBox.Text" Value="">
+                    <Setter Property="Control.Background" Value="{StaticResource HelpBrush}" />
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkElement.Style>
+            <!--Unknown connection ID: 4-->
+          </TextBox>
+        </Grid>
+        <CheckBox FrameworkElement.Margin="0,10,0,0" Control.Foreground="#FFFFFFFF">
+          <ToggleButton.IsChecked>
+            <Binding>
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SavePwdCheckBox</Ctor>
+            </Binding>
+          </ToggleButton.IsChecked>记住密码<!--Unknown connection ID: 5--></CheckBox>
+        <StackPanel Grid.Row="4">
+          <StackPanel FrameworkElement.Margin="20,10,20,0">
+            <UIElement.Visibility>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginLoading</Ctor>
+              </Binding>
+            </UIElement.Visibility>
+            <ProgressBar FrameworkElement.Height="15" IsIndeterminate="True" />
+          </StackPanel>
+          <Button FrameworkElement.Name="loginBut" FrameworkElement.Margin="10,0,10,0" FrameworkElement.Height="60" Control.FontSize="16" Control.FontWeight="Bold" FrameworkElement.Cursor="Hand">
+            <ContentControl.Content>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginButContent</Ctor>
+              </Binding>
+            </ContentControl.Content>
+            <UIElement.IsEnabled>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginButIsDisable</Ctor>
+              </Binding>
+            </UIElement.IsEnabled>
+            <ButtonBase.Command>
+              <Binding>
+                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginCommand</Ctor>
+              </Binding>
+            </ButtonBase.Command>
+            <ButtonBase.CommandParameter>
+              <Binding>
+                <Binding.RelativeSource>
+                  <RelativeSource>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">FindAncestor</Ctor>
+                    <RelativeSource.AncestorType>
+                      <x:TypeExtension>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Window</Ctor>
+                      </x:TypeExtension>
+                    </RelativeSource.AncestorType>
+                  </RelativeSource>
+                </Binding.RelativeSource>
+              </Binding>
+            </ButtonBase.CommandParameter>
+            <Control.Template>
+              <ControlTemplate>
+                <Grid>
+                  <Image FrameworkElement.Margin="2" Source="/res/login_but.png" FrameworkElement.Width="300" FrameworkElement.Height="55">
+                    <UIElement.Visibility>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginButVis</Ctor>
+                      </Binding>
+                    </UIElement.Visibility>
+                  </Image>
+                  <Image FrameworkElement.Margin="2" Source="/res/login_but_ing.png" FrameworkElement.Width="300" FrameworkElement.Height="55">
+                    <UIElement.Visibility>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">LoginButIngVis</Ctor>
+                      </Binding>
+                    </UIElement.Visibility>
+                  </Image>
+                </Grid>
+              </ControlTemplate>
+            </Control.Template>
+            <!--Unknown connection ID: 6-->
+          </Button>
+        </StackPanel>
+        <Button FrameworkElement.Name="resetBut" Grid.Row="4" FrameworkElement.Margin="60,0,60,0" FrameworkElement.Height="40" Control.FontSize="12" Control.FontWeight="Normal" FrameworkElement.Cursor="Hand" ContentControl.Content="重置口令">
+          <ButtonBase.Command>
+            <Binding>
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ResetCommand</Ctor>
+            </Binding>
+          </ButtonBase.Command>
+          <UIElement.Visibility>
+            <Binding>
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsVisResetBut</Ctor>
+            </Binding>
+          </UIElement.Visibility>
+          <Control.Template>
+            <ControlTemplate>
+              <Grid>
+                <Image FrameworkElement.Margin="2" Source="/res/login_reset.png" FrameworkElement.Width="180" FrameworkElement.Height="30" />
+              </Grid>
+            </ControlTemplate>
+          </Control.Template>
+          <!--Unknown connection ID: 7-->
+        </Button>
+      </StackPanel>
+      <StackPanel Grid.Row="2" FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center">
+        <Label FrameworkElement.Margin="0,0,0,45" FrameworkElement.HorizontalAlignment="Center" Control.FontSize="12" Control.Foreground="#FFFFFFFF">
+          <ContentControl.Content>
+            <Binding>
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AppVersion</Ctor>
+            </Binding>
+          </ContentControl.Content>
+        </Label>
+      </StackPanel>
+    </Grid>
+  </Grid>
+</Window>

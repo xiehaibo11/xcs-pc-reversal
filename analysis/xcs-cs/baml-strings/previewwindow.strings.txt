@@ -1,0 +1,25 @@
+:xcs, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null
+clr-namespace:distinguish
+distinguish
+distinguish.PreviewWindow
+XPresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+NWindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+SPresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+9http://schemas.microsoft.com/winfx/2006/xaml/presentation
+NSystem.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+x,http://schemas.microsoft.com/winfx/2006/xaml
+d2http://schemas.microsoft.com/expression/blend/2008
+mc;http://schemas.openxmlformats.org/markup-compatibility/2006
+local
+clr-namespace:distinguish
+WindowStartupLocation$
+CenterScreen=
+Title$
+ResizeMode$
+NoResize=
+ColumnDefinitions
+RowDefinitions
+Bold"
+Bold"
+Bold"
+Bold"

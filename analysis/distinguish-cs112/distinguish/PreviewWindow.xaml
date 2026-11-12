@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="distinguish.PreviewWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:distinguish" Window.WindowStartupLocation="CenterScreen" Window.Title="选择预览窗口" FrameworkElement.Height="300" FrameworkElement.Width="420" Window.ResizeMode="NoResize">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Button Grid.Column="0" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold">东方<!--Unknown connection ID: 1--></Button>
+    <Button Grid.Column="1" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold">南方<!--Unknown connection ID: 2--></Button>
+    <Button Grid.Column="0" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold">西方<!--Unknown connection ID: 3--></Button>
+    <Button Grid.Column="1" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold">北方<!--Unknown connection ID: 4--></Button>
+  </Grid>
+</Window>

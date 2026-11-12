@@ -1,0 +1,313 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>distinguish</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net47</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="res/other/qiu.jpg" />
+    <None Remove="previewwindow.baml" />
+    <None Remove="onlinewindows.baml" />
+    <None Remove="res/other/x.jpg" />
+    <None Remove="editpwdwindow.baml" />
+    <None Remove="res/other/zhong.jpg" />
+    <None Remove="res/sucai/tiao/1.png" />
+    <None Remove="res/sucai/tiao/3.png" />
+    <None Remove="res/sucai/tiao/2.png" />
+    <None Remove="res/sucai/tiao/5.png" />
+    <None Remove="res/sucai/tiao/4.png" />
+    <None Remove="res/sucai/tiao/7.png" />
+    <None Remove="res/sucai/tiao/6.png" />
+    <None Remove="res/sucai/tiao/9.png" />
+    <None Remove="res/sucai/tiao/8.png" />
+    <None Remove="verifypwdwindow.baml" />
+    <None Remove="res/tiao/2.jpg" />
+    <None Remove="res/tiao/3.jpg" />
+    <None Remove="res/tiao/6.jpg" />
+    <None Remove="res/tiao/1.jpg" />
+    <None Remove="jyz_favicon.ico" />
+    <None Remove="res/tiao/4.jpg" />
+    <None Remove="res/tiao/7.jpg" />
+    <None Remove="res/tiao/5.jpg" />
+    <None Remove="res/tiao/8.jpg" />
+    <None Remove="res/tiao/9.jpg" />
+    <None Remove="res/other/bei.jpg" />
+    <None Remove="res/other/chun.jpg" />
+    <None Remove="res/other/dong_1.jpg" />
+    <None Remove="000.ico" />
+    <None Remove="res/sucai/wan/9.png" />
+    <None Remove="res/sucai/wan/8.png" />
+    <None Remove="res/sucai/wan/3.png" />
+    <None Remove="res/sucai/wan/1.png" />
+    <None Remove="res/sucai/wan/2.png" />
+    <None Remove="res/sucai/wan/7.png" />
+    <None Remove="res/sucai/wan/5.png" />
+    <None Remove="res/sucai/wan/6.png" />
+    <None Remove="res/sucai/wan/4.png" />
+    <None Remove="res/other/baida.jpg" />
+    <None Remove="res/login_but_ing.png" />
+    <None Remove="previewsettingwindow.baml" />
+    <None Remove="res/other/kuang.jpg" />
+    <None Remove="res/top_bg.jpg" />
+    <None Remove="loginwindow.baml" />
+    <None Remove="res/other/zhu.jpg" />
+    <None Remove="res/other/mei.jpg" />
+    <None Remove="res/bottom_bg.jpg" />
+    <None Remove="res/sucai/50/7.png" />
+    <None Remove="res/sucai/50/6.png" />
+    <None Remove="res/sucai/50/5.png" />
+    <None Remove="res/sucai/50/4.png" />
+    <None Remove="res/sucai/50/3.png" />
+    <None Remove="res/sucai/50/2.png" />
+    <None Remove="res/sucai/50/1.png" />
+    <None Remove="res/sucai/50/8.png" />
+    <None Remove="res/login_but.png" />
+    <None Remove="res/sucai/zi/2.png" />
+    <None Remove="res/sucai/zi/1.png" />
+    <None Remove="res/sucai/zi/4.png" />
+    <None Remove="res/sucai/zi/3.png" />
+    <None Remove="res/sucai/zi/6.png" />
+    <None Remove="res/sucai/zi/5.png" />
+    <None Remove="res/sucai/zi/7.png" />
+    <None Remove="homewindow.baml" />
+    <None Remove="res/tong/2.jpg" />
+    <None Remove="res/tong/3.jpg" />
+    <None Remove="res/tong/1.jpg" />
+    <None Remove="res/tong/6.jpg" />
+    <None Remove="res/tong/7.jpg" />
+    <None Remove="res/tong/4.jpg" />
+    <None Remove="res/tong/5.jpg" />
+    <None Remove="res/tong/8.jpg" />
+    <None Remove="res/tong/9.jpg" />
+    <None Remove="res/other/empty.jpg" />
+    <None Remove="res/login_bg.png" />
+    <None Remove="res/other/fa.jpg" />
+    <None Remove="res/sucai/hua/7.png" />
+    <None Remove="res/sucai/hua/8.png" />
+    <None Remove="res/sucai/hua/5.png" />
+    <None Remove="res/sucai/hua/6.png" />
+    <None Remove="res/sucai/hua/3.png" />
+    <None Remove="res/sucai/hua/4.png" />
+    <None Remove="res/sucai/hua/1.png" />
+    <None Remove="res/sucai/hua/2.png" />
+    <None Remove="errorwindow.baml" />
+    <None Remove="res/sucai/tong/1.png" />
+    <None Remove="res/sucai/tong/3.png" />
+    <None Remove="res/sucai/tong/5.png" />
+    <None Remove="res/sucai/tong/2.png" />
+    <None Remove="res/sucai/tong/7.png" />
+    <None Remove="res/sucai/tong/4.png" />
+    <None Remove="res/sucai/tong/9.png" />
+    <None Remove="res/sucai/tong/6.png" />
+    <None Remove="res/sucai/tong/8.png" />
+    <None Remove="res/other/lan_1.jpg" />
+    <None Remove="xincaisheng_favicon.ico" />
+    <None Remove="res/login_reset.png" />
+    <None Remove="favicon.ico" />
+    <None Remove="res/other/ju.jpg" />
+    <None Remove="res/other/dong.jpg" />
+    <None Remove="res/wan/8.jpg" />
+    <None Remove="res/wan/9.jpg" />
+    <None Remove="res/wan/1.jpg" />
+    <None Remove="res/wan/2.jpg" />
+    <None Remove="res/wan/3.jpg" />
+    <None Remove="res/wan/4.jpg" />
+    <None Remove="res/wan/5.jpg" />
+    <None Remove="res/wan/6.jpg" />
+    <None Remove="res/wan/7.jpg" />
+    <None Remove="app.baml" />
+    <None Remove="res/other/xia.jpg" />
+    <None Remove="res/other/xi.jpg" />
+    <None Remove="res/other/lan.jpg" />
+    <None Remove="BouncyCastle.Cryptography.dll" />
+    <None Remove="CommonServiceLocator.dll" />
+    <None Remove="GalaSoft.MvvmLight.dll" />
+    <None Remove="GalaSoft.MvvmLight.Extras.dll" />
+    <None Remove="GalaSoft.MvvmLight.Platform.dll" />
+    <None Remove="Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Remove="Microsoft.Extensions.Configuration.Ini.dll" />
+    <None Remove="Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <None Remove="Microsoft.Extensions.FileProviders.Physical.dll" />
+    <None Remove="Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <None Remove="Microsoft.Extensions.Primitives.dll" />
+    <None Remove="Newtonsoft.Json.dll" />
+    <None Remove="System.Buffers.dll" />
+    <None Remove="System.Memory.dll" />
+    <None Remove="System.Numerics.Vectors.dll" />
+    <None Remove="System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Remove="System.Threading.Tasks.Extensions.dll" />
+    <None Remove="System.ValueTuple.dll" />
+    <None Remove="System.Windows.Interactivity.dll" />
+    <None Remove="websocket-sharp.dll" />
+    <EmbeddedResource Include="res/other/qiu.jpg" LogicalName="res/other/qiu.jpg" />
+    <EmbeddedResource Include="previewwindow.baml" LogicalName="previewwindow.baml" />
+    <EmbeddedResource Include="onlinewindows.baml" LogicalName="onlinewindows.baml" />
+    <EmbeddedResource Include="res/other/x.jpg" LogicalName="res/other/x.jpg" />
+    <EmbeddedResource Include="editpwdwindow.baml" LogicalName="editpwdwindow.baml" />
+    <EmbeddedResource Include="res/other/zhong.jpg" LogicalName="res/other/zhong.jpg" />
+    <EmbeddedResource Include="res/sucai/tiao/1.png" LogicalName="res/sucai/tiao/1.png" />
+    <EmbeddedResource Include="res/sucai/tiao/3.png" LogicalName="res/sucai/tiao/3.png" />
+    <EmbeddedResource Include="res/sucai/tiao/2.png" LogicalName="res/sucai/tiao/2.png" />
+    <EmbeddedResource Include="res/sucai/tiao/5.png" LogicalName="res/sucai/tiao/5.png" />
+    <EmbeddedResource Include="res/sucai/tiao/4.png" LogicalName="res/sucai/tiao/4.png" />
+    <EmbeddedResource Include="res/sucai/tiao/7.png" LogicalName="res/sucai/tiao/7.png" />
+    <EmbeddedResource Include="res/sucai/tiao/6.png" LogicalName="res/sucai/tiao/6.png" />
+    <EmbeddedResource Include="res/sucai/tiao/9.png" LogicalName="res/sucai/tiao/9.png" />
+    <EmbeddedResource Include="res/sucai/tiao/8.png" LogicalName="res/sucai/tiao/8.png" />
+    <EmbeddedResource Include="verifypwdwindow.baml" LogicalName="verifypwdwindow.baml" />
+    <EmbeddedResource Include="res/tiao/2.jpg" LogicalName="res/tiao/2.jpg" />
+    <EmbeddedResource Include="res/tiao/3.jpg" LogicalName="res/tiao/3.jpg" />
+    <EmbeddedResource Include="res/tiao/6.jpg" LogicalName="res/tiao/6.jpg" />
+    <EmbeddedResource Include="res/tiao/1.jpg" LogicalName="res/tiao/1.jpg" />
+    <EmbeddedResource Include="jyz_favicon.ico" LogicalName="jyz_favicon.ico" />
+    <EmbeddedResource Include="res/tiao/4.jpg" LogicalName="res/tiao/4.jpg" />
+    <EmbeddedResource Include="res/tiao/7.jpg" LogicalName="res/tiao/7.jpg" />
+    <EmbeddedResource Include="res/tiao/5.jpg" LogicalName="res/tiao/5.jpg" />
+    <EmbeddedResource Include="res/tiao/8.jpg" LogicalName="res/tiao/8.jpg" />
+    <EmbeddedResource Include="res/tiao/9.jpg" LogicalName="res/tiao/9.jpg" />
+    <EmbeddedResource Include="res/other/bei.jpg" LogicalName="res/other/bei.jpg" />
+    <EmbeddedResource Include="res/other/chun.jpg" LogicalName="res/other/chun.jpg" />
+    <EmbeddedResource Include="res/other/dong_1.jpg" LogicalName="res/other/dong_1.jpg" />
+    <EmbeddedResource Include="000.ico" LogicalName="000.ico" />
+    <EmbeddedResource Include="res/sucai/wan/9.png" LogicalName="res/sucai/wan/9.png" />
+    <EmbeddedResource Include="res/sucai/wan/8.png" LogicalName="res/sucai/wan/8.png" />
+    <EmbeddedResource Include="res/sucai/wan/3.png" LogicalName="res/sucai/wan/3.png" />
+    <EmbeddedResource Include="res/sucai/wan/1.png" LogicalName="res/sucai/wan/1.png" />
+    <EmbeddedResource Include="res/sucai/wan/2.png" LogicalName="res/sucai/wan/2.png" />
+    <EmbeddedResource Include="res/sucai/wan/7.png" LogicalName="res/sucai/wan/7.png" />
+    <EmbeddedResource Include="res/sucai/wan/5.png" LogicalName="res/sucai/wan/5.png" />
+    <EmbeddedResource Include="res/sucai/wan/6.png" LogicalName="res/sucai/wan/6.png" />
+    <EmbeddedResource Include="res/sucai/wan/4.png" LogicalName="res/sucai/wan/4.png" />
+    <EmbeddedResource Include="res/other/baida.jpg" LogicalName="res/other/baida.jpg" />
+    <EmbeddedResource Include="res/login_but_ing.png" LogicalName="res/login_but_ing.png" />
+    <EmbeddedResource Include="previewsettingwindow.baml" LogicalName="previewsettingwindow.baml" />
+    <EmbeddedResource Include="res/other/kuang.jpg" LogicalName="res/other/kuang.jpg" />
+    <EmbeddedResource Include="res/top_bg.jpg" LogicalName="res/top_bg.jpg" />
+    <EmbeddedResource Include="loginwindow.baml" LogicalName="loginwindow.baml" />
+    <EmbeddedResource Include="res/other/zhu.jpg" LogicalName="res/other/zhu.jpg" />
+    <EmbeddedResource Include="res/other/mei.jpg" LogicalName="res/other/mei.jpg" />
+    <EmbeddedResource Include="res/bottom_bg.jpg" LogicalName="res/bottom_bg.jpg" />
+    <EmbeddedResource Include="res/sucai/50/7.png" LogicalName="res/sucai/50/7.png" />
+    <EmbeddedResource Include="res/sucai/50/6.png" LogicalName="res/sucai/50/6.png" />
+    <EmbeddedResource Include="res/sucai/50/5.png" LogicalName="res/sucai/50/5.png" />
+    <EmbeddedResource Include="res/sucai/50/4.png" LogicalName="res/sucai/50/4.png" />
+    <EmbeddedResource Include="res/sucai/50/3.png" LogicalName="res/sucai/50/3.png" />
+    <EmbeddedResource Include="res/sucai/50/2.png" LogicalName="res/sucai/50/2.png" />
+    <EmbeddedResource Include="res/sucai/50/1.png" LogicalName="res/sucai/50/1.png" />
+    <EmbeddedResource Include="res/sucai/50/8.png" LogicalName="res/sucai/50/8.png" />
+    <EmbeddedResource Include="res/login_but.png" LogicalName="res/login_but.png" />
+    <EmbeddedResource Include="res/sucai/zi/2.png" LogicalName="res/sucai/zi/2.png" />
+    <EmbeddedResource Include="res/sucai/zi/1.png" LogicalName="res/sucai/zi/1.png" />
+    <EmbeddedResource Include="res/sucai/zi/4.png" LogicalName="res/sucai/zi/4.png" />
+    <EmbeddedResource Include="res/sucai/zi/3.png" LogicalName="res/sucai/zi/3.png" />
+    <EmbeddedResource Include="res/sucai/zi/6.png" LogicalName="res/sucai/zi/6.png" />
+    <EmbeddedResource Include="res/sucai/zi/5.png" LogicalName="res/sucai/zi/5.png" />
+    <EmbeddedResource Include="res/sucai/zi/7.png" LogicalName="res/sucai/zi/7.png" />
+    <EmbeddedResource Include="homewindow.baml" LogicalName="homewindow.baml" />
+    <EmbeddedResource Include="res/tong/2.jpg" LogicalName="res/tong/2.jpg" />
+    <EmbeddedResource Include="res/tong/3.jpg" LogicalName="res/tong/3.jpg" />
+    <EmbeddedResource Include="res/tong/1.jpg" LogicalName="res/tong/1.jpg" />
+    <EmbeddedResource Include="res/tong/6.jpg" LogicalName="res/tong/6.jpg" />
+    <EmbeddedResource Include="res/tong/7.jpg" LogicalName="res/tong/7.jpg" />
+    <EmbeddedResource Include="res/tong/4.jpg" LogicalName="res/tong/4.jpg" />
+    <EmbeddedResource Include="res/tong/5.jpg" LogicalName="res/tong/5.jpg" />
+    <EmbeddedResource Include="res/tong/8.jpg" LogicalName="res/tong/8.jpg" />
+    <EmbeddedResource Include="res/tong/9.jpg" LogicalName="res/tong/9.jpg" />
+    <EmbeddedResource Include="res/other/empty.jpg" LogicalName="res/other/empty.jpg" />
+    <EmbeddedResource Include="res/login_bg.png" LogicalName="res/login_bg.png" />
+    <EmbeddedResource Include="res/other/fa.jpg" LogicalName="res/other/fa.jpg" />
+    <EmbeddedResource Include="res/sucai/hua/7.png" LogicalName="res/sucai/hua/7.png" />
+    <EmbeddedResource Include="res/sucai/hua/8.png" LogicalName="res/sucai/hua/8.png" />
+    <EmbeddedResource Include="res/sucai/hua/5.png" LogicalName="res/sucai/hua/5.png" />
+    <EmbeddedResource Include="res/sucai/hua/6.png" LogicalName="res/sucai/hua/6.png" />
+    <EmbeddedResource Include="res/sucai/hua/3.png" LogicalName="res/sucai/hua/3.png" />
+    <EmbeddedResource Include="res/sucai/hua/4.png" LogicalName="res/sucai/hua/4.png" />
+    <EmbeddedResource Include="res/sucai/hua/1.png" LogicalName="res/sucai/hua/1.png" />
+    <EmbeddedResource Include="res/sucai/hua/2.png" LogicalName="res/sucai/hua/2.png" />
+    <EmbeddedResource Include="errorwindow.baml" LogicalName="errorwindow.baml" />
+    <EmbeddedResource Include="res/sucai/tong/1.png" LogicalName="res/sucai/tong/1.png" />
+    <EmbeddedResource Include="res/sucai/tong/3.png" LogicalName="res/sucai/tong/3.png" />
+    <EmbeddedResource Include="res/sucai/tong/5.png" LogicalName="res/sucai/tong/5.png" />
+    <EmbeddedResource Include="res/sucai/tong/2.png" LogicalName="res/sucai/tong/2.png" />
+    <EmbeddedResource Include="res/sucai/tong/7.png" LogicalName="res/sucai/tong/7.png" />
+    <EmbeddedResource Include="res/sucai/tong/4.png" LogicalName="res/sucai/tong/4.png" />
+    <EmbeddedResource Include="res/sucai/tong/9.png" LogicalName="res/sucai/tong/9.png" />
+    <EmbeddedResource Include="res/sucai/tong/6.png" LogicalName="res/sucai/tong/6.png" />
+    <EmbeddedResource Include="res/sucai/tong/8.png" LogicalName="res/sucai/tong/8.png" />
+    <EmbeddedResource Include="res/other/lan_1.jpg" LogicalName="res/other/lan_1.jpg" />
+    <EmbeddedResource Include="xincaisheng_favicon.ico" LogicalName="xincaisheng_favicon.ico" />
+    <EmbeddedResource Include="res/login_reset.png" LogicalName="res/login_reset.png" />
+    <EmbeddedResource Include="favicon.ico" LogicalName="favicon.ico" />
+    <EmbeddedResource Include="res/other/ju.jpg" LogicalName="res/other/ju.jpg" />
+    <EmbeddedResource Include="res/other/dong.jpg" LogicalName="res/other/dong.jpg" />
+    <EmbeddedResource Include="res/wan/8.jpg" LogicalName="res/wan/8.jpg" />
+    <EmbeddedResource Include="res/wan/9.jpg" LogicalName="res/wan/9.jpg" />
+    <EmbeddedResource Include="res/wan/1.jpg" LogicalName="res/wan/1.jpg" />
+    <EmbeddedResource Include="res/wan/2.jpg" LogicalName="res/wan/2.jpg" />
+    <EmbeddedResource Include="res/wan/3.jpg" LogicalName="res/wan/3.jpg" />
+    <EmbeddedResource Include="res/wan/4.jpg" LogicalName="res/wan/4.jpg" />
+    <EmbeddedResource Include="res/wan/5.jpg" LogicalName="res/wan/5.jpg" />
+    <EmbeddedResource Include="res/wan/6.jpg" LogicalName="res/wan/6.jpg" />
+    <EmbeddedResource Include="res/wan/7.jpg" LogicalName="res/wan/7.jpg" />
+    <EmbeddedResource Include="app.baml" LogicalName="app.baml" />
+    <EmbeddedResource Include="res/other/xia.jpg" LogicalName="res/other/xia.jpg" />
+    <EmbeddedResource Include="res/other/xi.jpg" LogicalName="res/other/xi.jpg" />
+    <EmbeddedResource Include="res/other/lan.jpg" LogicalName="res/other/lan.jpg" />
+    <EmbeddedResource Include="BouncyCastle.Cryptography.dll" LogicalName="BouncyCastle.Cryptography.dll" />
+    <EmbeddedResource Include="CommonServiceLocator.dll" LogicalName="CommonServiceLocator.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.dll" LogicalName="GalaSoft.MvvmLight.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.Extras.dll" LogicalName="GalaSoft.MvvmLight.Extras.dll" />
+    <EmbeddedResource Include="GalaSoft.MvvmLight.Platform.dll" LogicalName="GalaSoft.MvvmLight.Platform.dll" />
+    <EmbeddedResource Include="Microsoft.Bcl.AsyncInterfaces.dll" LogicalName="Microsoft.Bcl.AsyncInterfaces.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.Abstractions.dll" LogicalName="Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.dll" LogicalName="Microsoft.Extensions.Configuration.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.FileExtensions.dll" LogicalName="Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Configuration.Ini.dll" LogicalName="Microsoft.Extensions.Configuration.Ini.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileProviders.Abstractions.dll" LogicalName="Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileProviders.Physical.dll" LogicalName="Microsoft.Extensions.FileProviders.Physical.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.FileSystemGlobbing.dll" LogicalName="Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <EmbeddedResource Include="Microsoft.Extensions.Primitives.dll" LogicalName="Microsoft.Extensions.Primitives.dll" />
+    <EmbeddedResource Include="Newtonsoft.Json.dll" LogicalName="Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="System.Buffers.dll" LogicalName="System.Buffers.dll" />
+    <EmbeddedResource Include="System.Memory.dll" LogicalName="System.Memory.dll" />
+    <EmbeddedResource Include="System.Numerics.Vectors.dll" LogicalName="System.Numerics.Vectors.dll" />
+    <EmbeddedResource Include="System.Runtime.CompilerServices.Unsafe.dll" LogicalName="System.Runtime.CompilerServices.Unsafe.dll" />
+    <EmbeddedResource Include="System.Threading.Tasks.Extensions.dll" LogicalName="System.Threading.Tasks.Extensions.dll" />
+    <EmbeddedResource Include="System.ValueTuple.dll" LogicalName="System.ValueTuple.dll" />
+    <EmbeddedResource Include="System.Windows.Interactivity.dll" LogicalName="System.Windows.Interactivity.dll" />
+    <EmbeddedResource Include="websocket-sharp.dll" LogicalName="websocket-sharp.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase">
+      <HintPath>../../../../../../../opt/homebrew/Cellar/dotnet/10.0.401/libexec/shared/Microsoft.NETCore.App/10.0.12/WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight" />
+    <Reference Include="System.Net.Http">
+      <HintPath>../../../../../../../opt/homebrew/Cellar/dotnet/10.0.401/libexec/shared/Microsoft.NETCore.App/10.0.12/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography" />
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <Reference Include="websocket-sharp" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System.Core">
+      <HintPath>../../../../../../../opt/homebrew/Cellar/dotnet/10.0.401/libexec/shared/Microsoft.NETCore.App/10.0.12/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration" />
+    <Reference Include="Microsoft.Extensions.Configuration.Ini" />
+  </ItemGroup>
+</Project>
