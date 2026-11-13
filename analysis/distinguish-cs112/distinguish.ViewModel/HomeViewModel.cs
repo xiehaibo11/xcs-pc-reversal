@@ -2466,14 +2466,14 @@ public class HomeViewModel : ViewModelBase
 			{
 				Directory.CreateDirectory(path);
 			}
-			((Image)val).Save(path + "\\" + filename, ImageFormat.Jpeg);
+			((System.Drawing.Image)val).Save(path + "\\" + filename, ImageFormat.Jpeg);
 			if (File.Exists(path + "\\" + filename))
 			{
 				result = "true";
 			}
 			Bitmap val2 = new Bitmap((Stream)memoryStream);
-			((Image)val2).RotateFlip((RotateFlipType)2);
-			((Image)val2).Save(path + "\\" + filename + "_180.jpg", ImageFormat.Jpeg);
+			((System.Drawing.Image)val2).RotateFlip((RotateFlipType)2);
+			((System.Drawing.Image)val2).Save(path + "\\" + filename + "_180.jpg", ImageFormat.Jpeg);
 			memoryStream.Close();
 		}
 		catch (Exception ex)
@@ -3101,19 +3101,19 @@ public class HomeViewModel : ViewModelBase
 	public void PlayNotError()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/not_error.wav").Play();
+		//new SoundPlayer("./res/not_error.wav").Play(); // 提示音已按需求禁用
 	}
 
 	public void PlayError()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/error.wav").Play();
+		//new SoundPlayer("./res/error.wav").Play(); // 提示音已按需求禁用
 	}
 
 	public void PlayReceiveSound()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/receive_sound.wav").Play();
+		//new SoundPlayer("./res/receive_sound.wav").Play(); // 提示音已按需求禁用
 	}
 
 	private void ExecutValidMj(ChannelMjResult channelMjResult)

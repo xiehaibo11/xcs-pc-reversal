@@ -9,9 +9,9 @@
       <RowDefinition />
       <RowDefinition />
     </Grid.RowDefinitions>
-    <Button Grid.Column="0" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold">东方<!--Unknown connection ID: 1--></Button>
-    <Button Grid.Column="1" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold">南方<!--Unknown connection ID: 2--></Button>
-    <Button Grid.Column="0" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold">西方<!--Unknown connection ID: 3--></Button>
-    <Button Grid.Column="1" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold">北方<!--Unknown connection ID: 4--></Button>
+    <Button Grid.Column="0" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold" Click="Button_Click">东方<!--Unknown connection ID: 1--></Button>
+    <Button Grid.Column="1" Grid.Row="0" Control.FontSize="24" Control.FontWeight="Bold" Click="Button_Click_1">南方<!--Unknown connection ID: 2--></Button>
+    <Button Grid.Column="0" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold" Click="Button_Click_2">西方<!--Unknown connection ID: 3--></Button>
+    <Button Grid.Column="1" Grid.Row="1" Control.FontSize="24" Control.FontWeight="Bold" Click="Button_Click_3">北方<!--Unknown connection ID: 4--></Button>
   </Grid>
 </Window>

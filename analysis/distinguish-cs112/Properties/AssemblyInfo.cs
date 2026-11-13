@@ -14,7 +14,7 @@ using System.Windows.Resources;
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
-[assembly: ThemeInfo(/*Could not decode attribute arguments.*/)]
+[assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyFileVersion("2.0.1.0")]
 [assembly: AssemblyAssociatedContentFile("res/error.wav")]
 [assembly: AssemblyAssociatedContentFile("res/not_error.wav")]

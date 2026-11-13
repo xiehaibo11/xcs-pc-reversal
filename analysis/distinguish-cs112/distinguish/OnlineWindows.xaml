@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Window x:Class="distinguish.OnlineWindows" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:distinguish" Window.WindowStartupLocation="CenterScreen" Window.Title="联机配置" FrameworkElement.Height="340" FrameworkElement.Width="450" Window.ResizeMode="NoResize">
   <FrameworkElement.Resources>
     <ResourceDictionary>
@@ -23,9 +23,7 @@
           <Label Grid.Column="0">东方：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ConfigNumber.East</Ctor>
-              </Binding>
+              <Binding Path="ConfigNumber.East"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
@@ -37,9 +35,7 @@
           <Label Grid.Column="0">南方：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ConfigNumber.South</Ctor>
-              </Binding>
+              <Binding Path="ConfigNumber.South"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
@@ -51,9 +47,7 @@
           <Label Grid.Column="0">西方：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ConfigNumber.West</Ctor>
-              </Binding>
+              <Binding Path="ConfigNumber.West"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
@@ -65,23 +59,17 @@
           <Label Grid.Column="0">北方：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ConfigNumber.North</Ctor>
-              </Binding>
+              <Binding Path="ConfigNumber.North"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
         <Grid Column="4">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveConfigNumber_Click">
             <ContentControl.Content>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveConfigNumberButContent</Ctor>
-              </Binding>
+              <Binding Path="SaveConfigNumberButContent"/>
             </ContentControl.Content>
             <UIElement.IsEnabled>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveConfigNumberButIsDisable</Ctor>
-              </Binding>
+              <Binding Path="SaveConfigNumberButIsDisable"/>
             </UIElement.IsEnabled>
             <!--Unknown connection ID: 1-->
           </Button>
@@ -97,15 +85,11 @@
         <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.Margin="0,6,0,0">
           <RadioButton>
             <ToggleButton.IsChecked>
-              <Binding Converter="{StaticResource genderConverterKey}" ConverterParameter="1">
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Data_send</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Data_send" Converter="{StaticResource genderConverterKey}" ConverterParameter="1"/>
             </ToggleButton.IsChecked>自动发送</RadioButton>
           <RadioButton FrameworkElement.Margin="4,0,0,0">
             <ToggleButton.IsChecked>
-              <Binding Converter="{StaticResource genderConverterKey}" ConverterParameter="0">
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Data_send</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Data_send" Converter="{StaticResource genderConverterKey}" ConverterParameter="0"/>
             </ToggleButton.IsChecked>手动发送</RadioButton>
         </StackPanel>
       </Grid>
@@ -118,15 +102,11 @@
         <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.Margin="0,6,0,0">
           <RadioButton>
             <ToggleButton.IsChecked>
-              <Binding Converter="{StaticResource genderConverterKey}" ConverterParameter="1">
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Count_type</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Count_type" Converter="{StaticResource genderConverterKey}" ConverterParameter="1"/>
             </ToggleButton.IsChecked>光控计数</RadioButton>
           <RadioButton FrameworkElement.Margin="4,0,0,0">
             <ToggleButton.IsChecked>
-              <Binding Converter="{StaticResource genderConverterKey}" ConverterParameter="0">
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Count_type</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Count_type" Converter="{StaticResource genderConverterKey}" ConverterParameter="0"/>
             </ToggleButton.IsChecked>机头计数</RadioButton>
         </StackPanel>
       </Grid>
@@ -144,9 +124,7 @@
           <Label Grid.Column="0">超时发送时间：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Timeout</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Timeout"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
@@ -158,23 +136,17 @@
           <Label Grid.Column="0">延时发送时间：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataConfig.Delay</Ctor>
-              </Binding>
+              <Binding Path="DataConfig.Delay"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
         <Grid Column="2">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveDataConfig_Click">
             <ContentControl.Content>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveDataConfigButContent</Ctor>
-              </Binding>
+              <Binding Path="SaveDataConfigButContent"/>
             </ContentControl.Content>
             <UIElement.IsEnabled>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveDataConfigButIsDisable</Ctor>
-              </Binding>
+              <Binding Path="SaveDataConfigButIsDisable"/>
             </UIElement.IsEnabled>
             <!--Unknown connection ID: 2-->
           </Button>
@@ -186,9 +158,7 @@
         <Label ContentControl.Content="《" />
         <Label>
           <ContentControl.Content>
-            <Binding>
-              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">WifiConfig.Ssid</Ctor>
-            </Binding>
+            <Binding Path="WifiConfig.Ssid"/>
           </ContentControl.Content>
         </Label>
         <Label ContentControl.Content="》" />
@@ -196,9 +166,7 @@
         <Label ContentControl.Content="《" />
         <Label>
           <ContentControl.Content>
-            <Binding>
-              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">WifiConfig.Pwd</Ctor>
-            </Binding>
+            <Binding Path="WifiConfig.Pwd"/>
           </ContentControl.Content>
         </Label>
         <Label ContentControl.Content="》" />
@@ -217,9 +185,7 @@
           <Label Grid.Column="0">WIFI：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">WifiConfig.Ssid</Ctor>
-              </Binding>
+              <Binding Path="WifiConfig.Ssid"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
@@ -231,23 +197,17 @@
           <Label Grid.Column="0">密码：</Label>
           <TextBox Grid.Column="1" Control.VerticalContentAlignment="Center">
             <TextBox.Text>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">WifiConfig.Pwd</Ctor>
-              </Binding>
+              <Binding Path="WifiConfig.Pwd"/>
             </TextBox.Text>
           </TextBox>
         </Grid>
         <Grid Column="2">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveWifi_Click">
             <ContentControl.Content>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveWifiConfigButContent</Ctor>
-              </Binding>
+              <Binding Path="SaveWifiConfigButContent"/>
             </ContentControl.Content>
             <UIElement.IsEnabled>
-              <Binding>
-                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveWifiConfigButIsDisable</Ctor>
-              </Binding>
+              <Binding Path="SaveWifiConfigButIsDisable"/>
             </UIElement.IsEnabled>
             <!--Unknown connection ID: 3-->
           </Button>
@@ -255,8 +215,8 @@
       </Grid>
       <Border FrameworkElement.Margin="0,10,0,0" FrameworkElement.Height="0.5" Background="#FF000000" />
       <WrapPanel FrameworkElement.Margin="0,20,0,0">
-        <Button Control.Padding="10,10,10,10">重启所有设备<!--Unknown connection ID: 4--></Button>
-        <Button FrameworkElement.Margin="15,0,0,0" Control.Padding="10,10,10,10">重置专属密码<!--Unknown connection ID: 5--></Button>
+        <Button Control.Padding="10,10,10,10" Click="RestartDevice_Click">重启所有设备<!--Unknown connection ID: 4--></Button>
+        <Button FrameworkElement.Margin="15,0,0,0" Control.Padding="10,10,10,10" Click="ResetVerifyPwd_Click">重置专属密码<!--Unknown connection ID: 5--></Button>
       </WrapPanel>
     </StackPanel>
   </Grid>

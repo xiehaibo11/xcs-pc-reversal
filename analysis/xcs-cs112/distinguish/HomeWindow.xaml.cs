@@ -29,7 +29,12 @@ public partial class HomeWindow : Window, IComponentConnector
 
 	private void HomeWindow_Closing(object sender, CancelEventArgs e)
 	{
-		(((FrameworkElement)this).DataContext as HomeViewModel).Logout();
+		// 崩溃修复：应用关机时 DataContext 可能已被清空，判空避免 NullReferenceException
+		HomeViewModel vm = ((FrameworkElement)this).DataContext as HomeViewModel;
+		if (vm != null)
+		{
+			vm.Logout();
+		}
 	}
 
 	private void HomeWindow_SizeChanged(object sender, SizeChangedEventArgs e)

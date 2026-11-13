@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quesheng.dialog.AiDialog">
+   <stylesheets>
+      <URL value="@Main.css" />
+   </stylesheets>
+   <children>
+      <CheckBox fx:id="kaiqiai" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" text="是否开启指挥提示" />
+      <ComboBox fx:id="zhihuifangxiang" layoutX="301.0" layoutY="256.0" prefWidth="150.0" />
+      <Label layoutX="241.0" layoutY="260.0" text="指挥方向:" />
+      <Label layoutX="153.0" layoutY="110.0" text="玩法:" />
+      <ComboBox fx:id="dafa" layoutX="181.0" layoutY="106.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

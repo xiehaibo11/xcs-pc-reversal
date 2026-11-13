@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="200.0" prefWidth="300.0" style="-fx-background: transparent;-fx-border-color: white;-fx-border-width: 1px;-fx-border-style: solid" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="8.0" layoutY="7.0" text="过张|过栋" textFill="#fc0808" />
+        <Text fill="#fcfcfc" layoutX="68.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="数字按钮快速向左右移动，或选择牌后右击屏幕右(左)半部分空白处向右(左)移动，右击目标牌在牌后插入。" wrappingWidth="250.0" />
+        <Label layoutX="8.0" layoutY="59.0" text="循环过牌" textFill="#fc0808" />
+        <Text fill="#fffbfb" layoutX="68.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="黄色数字按钮全部循环，透明按钮部分循环。" wrappingWidth="250.0" />
+        <Label layoutX="8.0" layoutY="79.0" text="单张对调" textFill="#fc0808" />
+        <Text fill="WHITE" layoutX="68.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="任意两张牌交换，不限方位。" wrappingWidth="250.0" />
+        <Label layoutX="8.0" layoutY="179.0" text="按ESC键退出" textFill="#fffdfd" />
+      <Label layoutX="8.0" layoutY="100.0" text="跨方位过栋" textFill="#fc0808" />
+        <Text fill="WHITE" layoutX="68.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="鼠标左键单击在目标栋前插入，鼠标右键单击在目标栋后插入，按着Shift时转向" wrappingWidth="250.0" />
+    </children>
+</fx:root>

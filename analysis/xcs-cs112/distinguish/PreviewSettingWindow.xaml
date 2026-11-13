@@ -65,13 +65,13 @@
                   <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0">上边</Label>
-                <Button FrameworkElement.Width="20" Grid.Column="1">-<!--Unknown connection ID: 1--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="1" Click="YSub">-<!--Unknown connection ID: 1--></Button>
                 <Slider RangeBase.Minimum="0" RangeBase.Maximum="240" FrameworkElement.Margin="4,0,0,4" Grid.Column="2">
                   <RangeBase.Value>
                     <Binding Path="Y"/>
                   </RangeBase.Value>
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="3">+<!--Unknown connection ID: 2--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="3" Click="YAdd">+<!--Unknown connection ID: 2--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -81,13 +81,13 @@
                   <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0">左边</Label>
-                <Button FrameworkElement.Width="20" Grid.Column="1">-<!--Unknown connection ID: 3--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="1" Click="XSub">-<!--Unknown connection ID: 3--></Button>
                 <Slider RangeBase.Minimum="0" RangeBase.Maximum="300" FrameworkElement.Margin="4,0,0,4" Grid.Column="2">
                   <RangeBase.Value>
                     <Binding Path="X"/>
                   </RangeBase.Value>
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="3">+<!--Unknown connection ID: 4--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="3" Click="XAdd">+<!--Unknown connection ID: 4--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -97,13 +97,13 @@
                   <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0">宽度</Label>
-                <Button FrameworkElement.Width="20" Grid.Column="1">-<!--Unknown connection ID: 5--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="1" Click="WidthSub">-<!--Unknown connection ID: 5--></Button>
                 <Slider RangeBase.Minimum="1" RangeBase.Maximum="320" FrameworkElement.Margin="4,0,0,4" Grid.Column="2">
                   <RangeBase.Value>
                     <Binding Path="Width"/>
                   </RangeBase.Value>
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="3">+<!--Unknown connection ID: 6--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="3" Click="WidthAdd">+<!--Unknown connection ID: 6--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -113,13 +113,13 @@
                   <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0">高度</Label>
-                <Button FrameworkElement.Width="20" Grid.Column="1">-<!--Unknown connection ID: 7--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="1" Click="HeightSub">-<!--Unknown connection ID: 7--></Button>
                 <Slider RangeBase.Minimum="1" RangeBase.Maximum="50" FrameworkElement.Margin="4,0,0,4" Grid.Column="2">
                   <RangeBase.Value>
                     <Binding Path="Height"/>
                   </RangeBase.Value>
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="3">+<!--Unknown connection ID: 8--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="3" Click="HeightAdd">+<!--Unknown connection ID: 8--></Button>
               </Grid>
             </StackPanel>
           </ScrollViewer>
@@ -141,14 +141,14 @@
                     <Binding Path="ImgRotation"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 9--></Button>
-                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="ImgRotationSub">-<!--Unknown connection ID: 9--></Button>
+                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="ImgRotation"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 10-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 11--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="ImgRotationAdd">+<!--Unknown connection ID: 11--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -164,14 +164,14 @@
                     <Binding Path="CapBrightness"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 12--></Button>
-                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="BrightnessSub">-<!--Unknown connection ID: 12--></Button>
+                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapBrightness"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 13-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 14--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="BrightnessAdd">+<!--Unknown connection ID: 14--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -187,14 +187,14 @@
                     <Binding Path="CapGain"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 15--></Button>
-                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="CapGainSub">-<!--Unknown connection ID: 15--></Button>
+                <Slider RangeBase.Maximum="64" Grid.Column="3" RangeBase.Minimum="-64" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapGain"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 16-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 17--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="CapGainAdd">+<!--Unknown connection ID: 17--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -210,14 +210,14 @@
                     <Binding Path="CapExposure"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 18--></Button>
-                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="CapExposureSub">-<!--Unknown connection ID: 18--></Button>
+                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapExposure"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 19-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 20--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="CapExposureAdd">+<!--Unknown connection ID: 20--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -233,14 +233,14 @@
                     <Binding Path="CapHue"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 21--></Button>
-                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="CapHueSub">-<!--Unknown connection ID: 21--></Button>
+                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapHue"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 22-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 23--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="CapHueAdd">+<!--Unknown connection ID: 23--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -256,14 +256,14 @@
                     <Binding Path="CapSaturation"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 24--></Button>
-                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="CapSaturationSub">-<!--Unknown connection ID: 24--></Button>
+                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapSaturation"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 25-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 26--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="CapSaturationAdd">+<!--Unknown connection ID: 26--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -279,14 +279,14 @@
                     <Binding Path="CapContrast"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 27--></Button>
-                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="CapContrastSub">-<!--Unknown connection ID: 27--></Button>
+                <Slider RangeBase.Maximum="500" Grid.Column="3" RangeBase.Minimum="-500" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="CapContrast"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 28-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 29--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="CapContrastAdd">+<!--Unknown connection ID: 29--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -302,14 +302,14 @@
                     <Binding Path="ImgMinHreshold"/>
                   </ContentControl.Content>
                 </Label>
-                <Button FrameworkElement.Width="20" Grid.Column="2">-<!--Unknown connection ID: 30--></Button>
-                <Slider RangeBase.Maximum="255" Grid.Column="3" RangeBase.Minimum="0" FrameworkElement.Margin="4,0,0,4">
+                <Button FrameworkElement.Width="20" Grid.Column="2" Click="ImgMinHresholdSub">-<!--Unknown connection ID: 30--></Button>
+                <Slider RangeBase.Maximum="255" Grid.Column="3" RangeBase.Minimum="0" FrameworkElement.Margin="4,0,0,4" ValueChanged="Slider_ValueChanged">
                   <RangeBase.Value>
                     <Binding Path="ImgMinHreshold"/>
                   </RangeBase.Value>
                   <!--Unknown connection ID: 31-->
                 </Slider>
-                <Button FrameworkElement.Width="20" Grid.Column="4">+<!--Unknown connection ID: 32--></Button>
+                <Button FrameworkElement.Width="20" Grid.Column="4" Click="ImgMinHresholdAdd">+<!--Unknown connection ID: 32--></Button>
               </Grid>
               <Grid FrameworkElement.Margin="0,4,0,0">
                 <Grid.ColumnDefinitions>
@@ -323,7 +323,7 @@
                     <Binding Path="CapFps"/>
                   </ContentControl.Content>
                 </Label>
-                <ComboBox Name="___CapFpsComboBox" Grid.Column="2" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Margin="0,0,0,0" FrameworkElement.VerticalAlignment="Top" FrameworkElement.Width="100">
+                <ComboBox Name="___CapFpsComboBox" Grid.Column="2" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Margin="0,0,0,0" FrameworkElement.VerticalAlignment="Top" FrameworkElement.Width="100" SelectionChanged="ComboBox_SelectionChanged">
                   <ComboBoxItem>60FPS</ComboBoxItem>
                   <ComboBoxItem>70FPS</ComboBoxItem>
                   <ComboBoxItem>80FPS</ComboBoxItem>
@@ -345,13 +345,13 @@
                 <ColumnDefinition Width="auto" />
               </Grid.ColumnDefinitions>
               <Label Grid.Column="0">电机转速</Label>
-              <Button FrameworkElement.Width="20" Grid.Column="1">-<!--Unknown connection ID: 34--></Button>
+              <Button FrameworkElement.Width="20" Grid.Column="1" Click="MotorSub">-<!--Unknown connection ID: 34--></Button>
               <Slider RangeBase.Minimum="100" RangeBase.Maximum="4900" FrameworkElement.Margin="4,0,0,4" Grid.Column="2">
                 <RangeBase.Value>
                   <Binding Path="Motor"/>
                 </RangeBase.Value>
               </Slider>
-              <Button FrameworkElement.Width="20" Grid.Column="3">+<!--Unknown connection ID: 35--></Button>
+              <Button FrameworkElement.Width="20" Grid.Column="3" Click="MotorAdd">+<!--Unknown connection ID: 35--></Button>
             </Grid>
             <StackPanel Orientation="Horizontal">
               <Label>电机转速设定值：</Label>
@@ -364,7 +364,7 @@
           </StackPanel>
         </TabItem>
       </TabControl>
-      <Button Grid.Row="2" FrameworkElement.Margin="0,10,10,0" FrameworkElement.Height="30">
+      <Button Grid.Row="2" FrameworkElement.Margin="0,10,10,0" FrameworkElement.Height="30" Click="SaveClick">
         <UIElement.IsEnabled>
           <Binding Path="SaveButIsDisable"/>
         </UIElement.IsEnabled>

@@ -22,7 +22,7 @@ public partial class ErrorWindow : Window, IComponentConnector
 
 	public ErrorWindow()
 	{
-		SystemSounds.Beep.Play();
+		//SystemSounds.Beep.Play(); // 提示音已按需求禁用
 		InitializeComponent();
 		if (AppConfig.getConfig(Constant.INI_VERIFY_ROOT, Constant.INI_VERIFY_PWD) == "")
 		{

@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
     <AssemblyName>xcs</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
@@ -298,14 +299,17 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight"><HintPath>GalaSoft.MvvmLight.dll</HintPath></Reference>
-    <Reference Include="System.Net.Http" />
     <Reference Include="BouncyCastle.Cryptography"><HintPath>BouncyCastle.Cryptography.dll</HintPath></Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Abstractions"><HintPath>Microsoft.Extensions.Configuration.Abstractions.dll</HintPath></Reference>
     <Reference Include="websocket-sharp"><HintPath>websocket-sharp.dll</HintPath></Reference>
     <Reference Include="Newtonsoft.Json"><HintPath>Newtonsoft.Json.dll</HintPath></Reference>
-    <Reference Include="System.Core" />
     <Reference Include="Microsoft.Extensions.Configuration"><HintPath>Microsoft.Extensions.Configuration.dll</HintPath></Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Ini"><HintPath>Microsoft.Extensions.Configuration.Ini.dll</HintPath></Reference>
   </ItemGroup>
   <ItemGroup><PackageReference Include="System.Drawing.Common" Version="8.0.10" /></ItemGroup>
+  <ItemGroup>
+    <Content Include="res/error.wav" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="res/not_error.wav" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="res/receive_sound.wav" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

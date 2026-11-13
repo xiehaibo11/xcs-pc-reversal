@@ -12,16 +12,6 @@ namespace distinguish;
 
 public partial class MainWindow : Window, IComponentConnector
 {
-	internal TextBox ipAddrInput;
-
-	internal TextBox userInput;
-
-	internal TextBox pwdInput;
-
-	internal Button loginBut;
-
-	internal Button resetBut;
-
 	public MainWindow()
 	{
 		Global.RemoveCacheImg();

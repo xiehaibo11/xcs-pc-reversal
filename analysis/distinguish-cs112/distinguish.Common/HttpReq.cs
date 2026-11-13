@@ -34,8 +34,14 @@ public class HttpReq
 		JsonSerializer val = new JsonSerializer();
 		((Collection<JsonConverter>)(object)val.Converters).Add((JsonConverter)new JavaScriptDateTimeConverter());
 		val.NullValueHandling = (NullValueHandling)1;
-		dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(result);
-		if (!(bool)dictionary["success"] && int.Parse(dictionary["code"].ToString()) == 401)
+		// 崩溃修复：服务器可能返回非 JSON 文本（网关/会话异常），判空避免 JsonReaderException 导致进程退出
+		try { dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(result); }
+		catch (JsonException) { dictionary = null; }
+		if (dictionary == null || !dictionary.ContainsKey("success"))
+		{
+			return "{\"success\":false,\"code\":500,\"msg\":\"服务器返回异常数据，请稍后重试\"}";
+		}
+		if (!(bool)dictionary["success"] && dictionary.ContainsKey("code") && int.Parse(dictionary["code"].ToString()) == 401)
 		{
 			MessageBox.Show("当前登录已失效,请重新登录!");
 			return "";
@@ -67,8 +73,14 @@ public class HttpReq
 			JsonSerializer val = new JsonSerializer();
 			((Collection<JsonConverter>)(object)val.Converters).Add((JsonConverter)new JavaScriptDateTimeConverter());
 			val.NullValueHandling = (NullValueHandling)1;
-			dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(result);
-			if (!(bool)dictionary["success"] && int.Parse(dictionary["code"].ToString()) == 401)
+			// 崩溃修复：服务器可能返回非 JSON 文本（网关/会话异常），判空避免 JsonReaderException 导致进程退出
+			try { dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(result); }
+			catch (JsonException) { dictionary = null; }
+			if (dictionary == null || !dictionary.ContainsKey("success"))
+			{
+				return "{\"success\":false,\"code\":500,\"msg\":\"服务器返回异常数据，请稍后重试\"}";
+			}
+			if (!(bool)dictionary["success"] && dictionary.ContainsKey("code") && int.Parse(dictionary["code"].ToString()) == 401)
 			{
 				MessageBox.Show("当前登录已失效,请重新登录!");
 				return "";

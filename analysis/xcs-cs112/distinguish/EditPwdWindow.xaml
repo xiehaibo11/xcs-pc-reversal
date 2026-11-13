@@ -8,7 +8,7 @@
           <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" ContentControl.Content="旧密码：" FrameworkElement.VerticalAlignment="Center" />
-        <TextBox FrameworkElement.Name="ipAddrInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+        <TextBox x:Name="ipAddrInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
           <TextBox.Text>
             <Binding Path="OldPwd"/>
           </TextBox.Text>
@@ -22,7 +22,7 @@
             </ResourceDictionary>
           </FrameworkElement.Resources>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="TextBox">
               
               <Style.Triggers>
                 <Trigger Property="TextBox.Text">
@@ -46,7 +46,7 @@
           <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" ContentControl.Content="新密码：" FrameworkElement.VerticalAlignment="Center" />
-        <TextBox FrameworkElement.Name="userInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+        <TextBox x:Name="userInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
           <TextBox.Text>
             <Binding Path="NewPwd"/>
           </TextBox.Text>
@@ -60,7 +60,7 @@
             </ResourceDictionary>
           </FrameworkElement.Resources>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="TextBox">
               
               <Style.Triggers>
                 <Trigger Property="TextBox.Text">
@@ -84,7 +84,7 @@
           <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" ContentControl.Content="重复新密码：" FrameworkElement.VerticalAlignment="Center" />
-        <TextBox FrameworkElement.Name="pwdInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
+        <TextBox x:Name="pwdInput" Grid.Column="1" FrameworkElement.Margin="10" Control.Padding="2,0,2,0" Control.VerticalContentAlignment="Center" FrameworkElement.Height="30">
           <TextBox.Text>
             <Binding Path="ReNewPwd"/>
           </TextBox.Text>
@@ -98,7 +98,7 @@
             </ResourceDictionary>
           </FrameworkElement.Resources>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="TextBox">
               
               <Style.Triggers>
                 <Trigger Property="TextBox.Text">
@@ -116,7 +116,7 @@
           <!--Unknown connection ID: 3-->
         </TextBox>
       </Grid>
-      <Button FrameworkElement.Name="loginBut" Grid.Row="4" FrameworkElement.Margin="10,24,10,0" FrameworkElement.Height="44" Control.FontSize="16" Control.FontWeight="Bold" FrameworkElement.Cursor="Hand">
+      <Button x:Name="loginBut" Grid.Row="4" FrameworkElement.Margin="10,24,10,0" FrameworkElement.Height="44" Control.FontSize="16" Control.FontWeight="Bold" FrameworkElement.Cursor="Hand" Click="SaveEditPwdBut_Click">
         <ContentControl.Content>
           <Binding Path="LoginButContent"/>
         </ContentControl.Content>

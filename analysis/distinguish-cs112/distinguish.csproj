@@ -4,8 +4,9 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
     <UseWPF>True</UseWPF>
-    <TargetFramework>net47</TargetFramework>
-    <Prefer32Bit>True</Prefer32Bit>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>14.0</LangVersion>
@@ -293,18 +294,18 @@
     <Resource Include="xincaisheng_favicon.ico" LogicalName="xincaisheng_favicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GalaSoft.MvvmLight" />
-    <Reference Include="System.Net.Http">
-      <HintPath>../../../../../../../opt/homebrew/Cellar/dotnet/10.0.401/libexec/shared/Microsoft.NETCore.App/10.0.12/System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="BouncyCastle.Cryptography" />
-    <Reference Include="Microsoft.Extensions.Configuration.Abstractions" />
-    <Reference Include="websocket-sharp" />
-    <Reference Include="Newtonsoft.Json" />
-    <Reference Include="System.Core">
-      <HintPath>../../../../../../../opt/homebrew/Cellar/dotnet/10.0.401/libexec/shared/Microsoft.NETCore.App/10.0.12/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration" />
-    <Reference Include="Microsoft.Extensions.Configuration.Ini" />
+    <Reference Include="GalaSoft.MvvmLight"><HintPath>GalaSoft.MvvmLight.dll</HintPath></Reference>
+    <Reference Include="BouncyCastle.Cryptography"><HintPath>BouncyCastle.Cryptography.dll</HintPath></Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions"><HintPath>Microsoft.Extensions.Configuration.Abstractions.dll</HintPath></Reference>
+    <Reference Include="websocket-sharp"><HintPath>websocket-sharp.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>Newtonsoft.Json.dll</HintPath></Reference>
+    <Reference Include="Microsoft.Extensions.Configuration"><HintPath>Microsoft.Extensions.Configuration.dll</HintPath></Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Ini"><HintPath>Microsoft.Extensions.Configuration.Ini.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup><PackageReference Include="System.Drawing.Common" Version="8.0.10" /></ItemGroup>
+  <ItemGroup>
+    <Content Include="res/error.wav" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="res/not_error.wav" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="res/receive_sound.wav" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

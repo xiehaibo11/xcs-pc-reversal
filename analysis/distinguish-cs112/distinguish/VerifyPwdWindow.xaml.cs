@@ -16,7 +16,6 @@ public partial class VerifyPwdWindow : Window, IComponentConnector
 {
 	public bool toLogin = true;
 
-	internal TextBox pwdInput;
 
 	public VerifyPwdWindow()
 	{
@@ -64,32 +63,5 @@ public partial class VerifyPwdWindow : Window, IComponentConnector
 			((Window)new MainWindow()).Show();
 		}
 		((Window)this).Close();
-	}
-
-	[DebuggerNonUserCode]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	void IComponentConnector.Connect(int connectionId, object target)
-	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Expected Obj, but got Unknown
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Expected Obj, but got Unknown
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Expected Obj, but got Unknown
-		switch (connectionId)
-		{
-		case 1:
-			pwdInput = (TextBox)target;
-			((UIElement)pwdInput).KeyUp += pwdInput_KeyUp;
-			break;
-		case 2:
-			((ButtonBase)(Button)target).Click += Button_Click;
-			break;
-		default:
-			_contentLoaded = true;
-			break;
-		}
 	}
 }

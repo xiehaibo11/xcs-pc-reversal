@@ -2,7 +2,7 @@
 <Application x:Class="distinguish.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:distinguish" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006" StartupUri="LoginWindow.xaml">
   <Application.Resources>
     <ResourceDictionary>
-      <Style x:Key="ValidPage_Mj_Item_Grid">
+      <Style x:Key="ValidPage_Mj_Item_Grid" TargetType="Grid">
         
         <Setter Property="FrameworkElement.Width" Value="45" />
         <Style.Triggers>
@@ -14,7 +14,7 @@
           </DataTrigger>
         </Style.Triggers>
       </Style>
-      <Style x:Key="ValidPage_Mj_Item_Img">
+      <Style x:Key="ValidPage_Mj_Item_Img" TargetType="Image">
         
         <Setter Property="FrameworkElement.Width" Value="45" />
         <Setter Property="Image.Stretch" Value="Fill" />
@@ -27,7 +27,7 @@
           </DataTrigger>
         </Style.Triggers>
       </Style>
-      <Style x:Key="ValidPage_Mj_Item_But">
+      <Style x:Key="ValidPage_Mj_Item_But" TargetType="Button">
         
         <Setter Property="Control.Background" Value="#00FFFFFF" />
         <Setter Property="Control.BorderThickness" Value="0" />
@@ -48,7 +48,7 @@
           </Setter.Value>
         </Setter>
       </Style>
-      <Style x:Key="ValidPage_ListBox">
+      <Style x:Key="ValidPage_ListBox" TargetType="ListBox">
         
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="False" />

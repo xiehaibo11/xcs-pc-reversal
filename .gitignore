@@ -4,3 +4,20 @@ obj/
 游戏端/游戏端/jre-9/
 game-jars/
 game-src/
+.sandbox-game/
+.tools/
+game-project/javafx9/
+game-project/out/
+
+# runtime GUI test dirs
+PC端/测试副本/
+
+# game fixture runtime artifacts
+game-fixture/runtime/
+tools/*.class
+game-fixture/__pycache__/
+
+# 验收证据与凭据（AGENTS.md 政策：captures/logs/凭据不入库）
+game-fixture/evidence/
+game-fixture/evidence/game_*.png
+docs/设备登录.md

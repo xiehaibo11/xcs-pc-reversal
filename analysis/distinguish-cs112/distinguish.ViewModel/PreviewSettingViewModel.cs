@@ -357,7 +357,7 @@ public class PreviewSettingViewModel : ViewModelBase
 		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0144: Unknown result type (might be due to invalid IL or missing references)
 		//IL_014a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0154: Expected Obj, but got Unknown
+		//IL_0154: Expected O, but got Unknown
 		//IL_018c: Unknown result type (might be due to invalid IL or missing references)
 		switch (device.Direction)
 		{
@@ -410,7 +410,7 @@ public class PreviewSettingViewModel : ViewModelBase
 		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
 		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Expected Obj, but got Unknown
+		//IL_003a: Expected O, but got Unknown
 		string text = HttpReq.post("preview/end_preview/" + previewId, "");
 		new Dictionary<string, object>();
 		JsonSerializer val = new JsonSerializer();
@@ -425,13 +425,13 @@ public class PreviewSettingViewModel : ViewModelBase
 		//IL_0298: Unknown result type (might be due to invalid IL or missing references)
 		//IL_029d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ad: Expected Obj, but got Unknown
+		//IL_02ad: Expected O, but got Unknown
 		//IL_0317: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02e5: Unknown result type (might be due to invalid IL or missing references)
 		SaveButIsDisable = false;
 		SaveButContent = "保存中...";
 		new HttpClient();
-		Dictionary<string, object> dictionary = new Dictionary<string, object>
+		Dictionary<string, object> obj = new Dictionary<string, object>
 		{
 			["top"] = Y,
 			["left"] = X,
@@ -464,15 +464,15 @@ public class PreviewSettingViewModel : ViewModelBase
 		device.Img_rotation = imgRotation;
 		device.Img_min_hreshold = ImgMinHreshold;
 		device.Cap_fps = CapFps;
-		string text = JsonConvert.SerializeObject((object)dictionary);
+		string text = JsonConvert.SerializeObject((object)obj);
 		string text2 = HttpReq.post("preview/set_params_v2/" + previewId, text);
 		Console.WriteLine(text);
-		Dictionary<string, object> dictionary2 = new Dictionary<string, object>();
+		Dictionary<string, object> dictionary = new Dictionary<string, object>();
 		JsonSerializer val = new JsonSerializer();
 		((Collection<JsonConverter>)(object)val.Converters).Add((JsonConverter)new JavaScriptDateTimeConverter());
 		val.NullValueHandling = (NullValueHandling)1;
-		dictionary2 = JsonConvert.DeserializeObject<Dictionary<string, object>>(text2);
-		if ((bool)dictionary2["success"])
+		dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(text2);
+		if ((bool)dictionary["success"])
 		{
 			SaveButIsDisable = true;
 			SaveButContent = "保存参数";
@@ -484,7 +484,7 @@ public class PreviewSettingViewModel : ViewModelBase
 		}
 		SaveButIsDisable = true;
 		SaveButContent = "保存参数";
-		MessageBox.Show(dictionary2["msg"].ToString(), "错误提示", (MessageBoxButton)0, (MessageBoxImage)16);
+		MessageBox.Show(dictionary["msg"].ToString(), "错误提示", (MessageBoxButton)0, (MessageBoxImage)16);
 		return false;
 	}
 }

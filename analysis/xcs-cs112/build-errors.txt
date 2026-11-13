@@ -1,4 +1,0 @@
-error MC3061:             }'. Line 25 Position 34. 
-error MC3061: The Element type 'System.Windows.Style' does not have an ass
-error MC4102: Tags of type 'DefTag' are not supported in template sections
-error MC4108: The root of a Template content section cannot contain an ele

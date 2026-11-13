@@ -8,9 +8,9 @@ namespace distinguish;
 
 public partial class App : Application
 {
-	internal void DoStartup(StartupEventArgs e)
+	protected override void OnStartup(StartupEventArgs e)
 	{
-		OnStartup(e);
+		base.OnStartup(e);
 		AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;
 	}
 

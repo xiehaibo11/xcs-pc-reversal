@@ -14,6 +14,7 @@ using System.Windows.Resources;
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
+[assembly: System.Runtime.Versioning.SupportedOSPlatform("windows6.1")]
 [assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyFileVersion("2.0.1.0")]
 [assembly: AssemblyAssociatedContentFile("res/error.wav")]

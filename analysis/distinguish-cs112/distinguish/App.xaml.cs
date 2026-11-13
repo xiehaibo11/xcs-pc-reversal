@@ -10,7 +10,7 @@ public partial class App : Application
 {
 	protected override void OnStartup(StartupEventArgs e)
 	{
-		((Application)this).OnStartup(e);
+		base.OnStartup(e);
 		AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;
 	}
 

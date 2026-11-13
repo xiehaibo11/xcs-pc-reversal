@@ -157,7 +157,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Expected Obj, but got Unknown
+		//IL_0025: Expected O, but got Unknown
 		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
 		string text = HttpReq.get("config/get_config");
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -182,7 +182,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Expected Obj, but got Unknown
+		//IL_0025: Expected O, but got Unknown
 		string text = HttpReq.get("config/get_device_wifi_list");
 		new Dictionary<string, object>();
 		JsonSerializer val = new JsonSerializer();
@@ -196,7 +196,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Expected Obj, but got Unknown
+		//IL_00af: Expected O, but got Unknown
 		//IL_0245: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0214: Unknown result type (might be due to invalid IL or missing references)
 		SaveConfigNumberButContent = "保存中...";
@@ -267,7 +267,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Expected Obj, but got Unknown
+		//IL_00af: Expected O, but got Unknown
 		//IL_0142: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
 		SaveDataConfigButContent = "保存中...";
@@ -305,7 +305,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_005a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006f: Expected Obj, but got Unknown
+		//IL_006f: Expected O, but got Unknown
 		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
 		SaveWifiConfigButContent = "保存中...";
@@ -336,7 +336,7 @@ public class OnlineConfigViewModel : ViewModelBase
 		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Expected Obj, but got Unknown
+		//IL_0025: Expected O, but got Unknown
 		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
 		string text = HttpReq.get("zhuo/restart_device");

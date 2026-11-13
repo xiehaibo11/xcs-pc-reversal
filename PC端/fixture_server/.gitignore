@@ -1,0 +1,6 @@
+# 运行期生成物，不跟踪
+requests.log
+rounds.jsonl
+selftest_server.log
+server_manual.log
+__pycache__/

@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-12-12, 12:05:52
+    Author     : root
+*/
+
+.mj_chu {
+    -fx-opacity: 1.2;
+    -fx-translate-y: 0px;
+    -fx-translate-x: 10px;
+}
+
+.mj_clicked {
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.border_red {
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.border_green {
+    -fx-border-color: lawngreen;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.border_yellow {
+    -fx-border-color:#ff6808;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+}
+
+.border_deepskyblue {
+    -fx-border-color: deepskyblue;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.caozuo_tishi {
+    -fx-padding: 0em;
+    -fx-text-fill: red;
+    -fx-cursor: hand;
+}
+
+.ting_tishi {
+    -fx-background-color: white;
+    -fx-padding: 0.5em;
+    -fx-text-fill: red;
+    -fx-font-family: "黑体";
+    -fx-font-size: 2em;
+    -fx-font-weight: 900;
+    /*设置圆角*/
+    -fx-background-radius:2em;
+    -fx-border-radius: 2em;
+}
+
+.huanpai_biaoji {
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.jiuzheng_huanpai_biaoji {
+    -fx-border-color: greenyellow;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.mj_guozhang {
+    -fx-opacity: 0.3;
+    -fx-background-color:red;
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.guopai_label_xuanze{
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+    -fx-background-color: yellow;
+}
+.guopai_label_xuanze:hover{
+    -fx-background-color: yellowgreen;
+}
+.guopai_label_xuanze_top{
+    -fx-text-fill: white;
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-cursor: hand;
+}
+.guopai_label_xuanze_top:hover{
+    -fx-background-color: yellowgreen;
+}
+
+.mj_last {
+    -fx-border-color: yellow;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+}
+
+.renyicaisheng{
+    -fx-text-fill: red;
+    -fx-cursor: hand;
+}
+
+.maima{
+    -fx-fill: crimson;
+    -fx-background-color: red;
+    -fx-blend-mode:hard-light;
+    /*-fx-blend-mode:multiply;*/
+}

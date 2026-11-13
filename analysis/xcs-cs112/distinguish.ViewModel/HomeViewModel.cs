@@ -3305,19 +3305,19 @@ public class HomeViewModel : ViewModelBase
 	public void PlayNotError()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/not_error.wav").Play();
+		//new SoundPlayer("./res/not_error.wav").Play(); // 提示音已按需求禁用
 	}
 
 	public void PlayError()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/error.wav").Play();
+		//new SoundPlayer("./res/error.wav").Play(); // 提示音已按需求禁用
 	}
 
 	public void PlayReceiveSound()
 	{
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		new SoundPlayer("./res/receive_sound.wav").Play();
+		//new SoundPlayer("./res/receive_sound.wav").Play(); // 提示音已按需求禁用
 	}
 
 	private void ExecutValidMj(ChannelMjResult channelMjResult)

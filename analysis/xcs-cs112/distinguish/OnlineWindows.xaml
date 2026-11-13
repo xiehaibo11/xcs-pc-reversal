@@ -64,7 +64,7 @@
           </TextBox>
         </Grid>
         <Grid Column="4">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveConfigNumber_Click">
             <ContentControl.Content>
               <Binding Path="SaveConfigNumberButContent"/>
             </ContentControl.Content>
@@ -85,11 +85,11 @@
         <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.Margin="0,6,0,0">
           <RadioButton>
             <ToggleButton.IsChecked>
-              <Binding Path="DataConfig.Data_send"/>
+              <Binding Path="DataConfig.Data_send" Converter="{StaticResource genderConverterKey}" ConverterParameter="1"/>
             </ToggleButton.IsChecked>自动发送</RadioButton>
           <RadioButton FrameworkElement.Margin="4,0,0,0">
             <ToggleButton.IsChecked>
-              <Binding Path="DataConfig.Data_send"/>
+              <Binding Path="DataConfig.Data_send" Converter="{StaticResource genderConverterKey}" ConverterParameter="0"/>
             </ToggleButton.IsChecked>手动发送</RadioButton>
         </StackPanel>
       </Grid>
@@ -102,11 +102,11 @@
         <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.Margin="0,6,0,0">
           <RadioButton>
             <ToggleButton.IsChecked>
-              <Binding Path="DataConfig.Count_type"/>
+              <Binding Path="DataConfig.Count_type" Converter="{StaticResource genderConverterKey}" ConverterParameter="1"/>
             </ToggleButton.IsChecked>光控计数</RadioButton>
           <RadioButton FrameworkElement.Margin="4,0,0,0">
             <ToggleButton.IsChecked>
-              <Binding Path="DataConfig.Count_type"/>
+              <Binding Path="DataConfig.Count_type" Converter="{StaticResource genderConverterKey}" ConverterParameter="0"/>
             </ToggleButton.IsChecked>机头计数</RadioButton>
         </StackPanel>
       </Grid>
@@ -141,7 +141,7 @@
           </TextBox>
         </Grid>
         <Grid Column="2">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveDataConfig_Click">
             <ContentControl.Content>
               <Binding Path="SaveDataConfigButContent"/>
             </ContentControl.Content>
@@ -202,7 +202,7 @@
           </TextBox>
         </Grid>
         <Grid Column="2">
-          <Button FrameworkElement.Margin="10,0,0,0">
+          <Button FrameworkElement.Margin="10,0,0,0" Click="SaveWifi_Click">
             <ContentControl.Content>
               <Binding Path="SaveWifiConfigButContent"/>
             </ContentControl.Content>
@@ -215,8 +215,8 @@
       </Grid>
       <Border FrameworkElement.Margin="0,10,0,0" FrameworkElement.Height="0.5" Background="#FF000000" />
       <WrapPanel FrameworkElement.Margin="0,20,0,0">
-        <Button Control.Padding="10,10,10,10">重启所有设备<!--Unknown connection ID: 4--></Button>
-        <Button FrameworkElement.Margin="15,0,0,0" Control.Padding="10,10,10,10">重置专属密码<!--Unknown connection ID: 5--></Button>
+        <Button Control.Padding="10,10,10,10" Click="RestartDevice_Click">重启所有设备<!--Unknown connection ID: 4--></Button>
+        <Button FrameworkElement.Margin="15,0,0,0" Control.Padding="10,10,10,10" Click="ResetVerifyPwd_Click">重置专属密码<!--Unknown connection ID: 5--></Button>
       </WrapPanel>
     </StackPanel>
   </Grid>

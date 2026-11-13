@@ -1,7 +1,7 @@
 # 逆向① xcs电脑图传(新) — xcs.exe 完整逆向文档
 
 样本：xcs.exe（10,269,696 字节，2026-04-17 编译，app_version 2.0.15，app_name=xcs）
-类型：PE32 GUI，C#/.NET 8 WPF（ilspycmd 9.1 反编译，45 个 .cs 接近源码质量）
+类型：原始样本为 PE32 GUI，C#/.NET Framework 4.7 WPF（45 个 .cs）；`analysis/xcs-cs112/` 还原工程另行迁移为 .NET 8 / x64，不能与原始目标混淆。
 反编译源码：`analysis/xcs-cs/` ｜ 本文档：逐功能还原
 
 ## 1. 程序角色

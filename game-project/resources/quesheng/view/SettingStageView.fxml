@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="CameraSettingAnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.212" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quesheng.controller.SettingStageController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="700.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="96.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="码牌" />
+                  <RadioButton fx:id="liangceng_radioBtn" layoutX="23.0" layoutY="42.0" mnemonicParsing="false" text="两层" />
+                  <CheckBox fx:id="baisanceng_144" layoutX="126.0" layoutY="42.0" mnemonicParsing="false" text="摆三层(144)" />
+                  <CheckBox fx:id="danzhangdongzaihou" disable="true" layoutX="260.0" layoutY="42.0" mnemonicParsing="false" text="单张(栋)在后" />
+                  <CheckBox fx:id="zhucengmapai" disable="true" layoutX="417.0" layoutY="42.0" mnemonicParsing="false" text="逐层码牌" />
+                  <RadioButton fx:id="sanceng_radioBtn" layoutX="23.0" layoutY="71.0" mnemonicParsing="false" text="三层" />
+                  <CheckBox fx:id="_136_sanceng_danzhangzaiqian" layoutX="126.0" layoutY="70.0" mnemonicParsing="false" text="136三层" />
+                  <CheckBox fx:id="baisiceng" disable="true" layoutX="417.0" layoutY="73.0" mnemonicParsing="false" text="摆四层(头+尾=六栋)" />
+                  <CheckBox fx:id="guoshanchediaohuan" layoutX="260.0" layoutY="73.0" mnemonicParsing="false" text="过山车正洗反推" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="294.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="7.0" text="启牌" />
+                  <Label layoutX="24.0" layoutY="30.0" text="玩家牌数:" />
+                  <ComboBox fx:id="wanjiapaishu" layoutX="84.0" layoutY="26.0" prefHeight="22.0" prefWidth="90.0" />
+                  <Label layoutX="246.0" layoutY="30.0" text="跳牌:" />
+                  <ComboBox fx:id="tiaopai" layoutX="285.0" layoutY="26.0" prefHeight="22.0" prefWidth="90.0" />
+                  <CheckBox fx:id="shangxiangzhupai" disable="true" layoutX="419.0" layoutY="29.0" mnemonicParsing="false" text="双向抓牌" />
+                  <Label layoutX="24.0" layoutY="56.0" text="每手张数:" />
+                  <ComboBox fx:id="meishouzhangshu" layoutX="84.0" layoutY="52.0" prefHeight="22.0" prefWidth="90.0" />
+                  <Label layoutX="235.0" layoutY="56.0" text="预测牌:" />
+                  <Spinner fx:id="yucepai" layoutX="284.0" layoutY="52.0" prefHeight="22.0" prefWidth="93.0" />
+                  <CheckBox fx:id="niezhuapai" layoutX="419.0" layoutY="55.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="69.0" text="逆抓牌" />
+                  <Label layoutX="24.0" layoutY="86.0" text="玩家人数:" />
+                  <ComboBox fx:id="wanjiarenshu" layoutX="84.0" layoutY="82.0" prefHeight="22.0" prefWidth="90.0" />
+                  <Label layoutX="235.0" layoutY="86.0" text="换手牌:" />
+                  <ComboBox fx:id="huanshoupai" layoutX="285.0" layoutY="82.0" prefHeight="22.0" prefWidth="90.0" />
+                  <CheckBox fx:id="zhuapaihouxuanzhuang" layoutX="418.0" layoutY="85.0" mnemonicParsing="false" text="抓牌后选庄" />
+                  <CheckBox fx:id="sanceng_liangdongsizhang" disable="true" layoutX="24.0" layoutY="111.0" mnemonicParsing="false" text="三层,两栋四张(抓牌)" />
+                  <CheckBox fx:id="errenzhuaerfangweipai" disable="true" layoutX="233.0" layoutY="111.0" mnemonicParsing="false" text="二人抓二方位牌" />
+                  <CheckBox fx:id="qutouzhang" disable="true" layoutX="417.0" layoutY="111.0" mnemonicParsing="false" text="去头张" />
+                  <CheckBox fx:id="disancengzuowanjiapai" layoutX="24.0" layoutY="136.0" mnemonicParsing="false" text="第三层做玩家牌" />
+                  <CheckBox fx:id="meijushetiaopai" layoutX="233.0" layoutY="136.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="102.0" text="每局设跳牌" />
+                  <CheckBox fx:id="bugoudongyizhiweibu" disable="true" layoutX="24.0" layoutY="161.0" mnemonicParsing="false" text="不够栋移至尾部" />
+                  <CheckBox fx:id="_20zhangzhuangjiaxianzhuangsanzhangzaizhuayizhang" disable="true" layoutX="233.0" layoutY="161.0" mnemonicParsing="false" text="20张庄家先抓3张再抓1张" />
+                  <CheckBox fx:id="butiaopaizhangjialianxu14xian13" layoutX="24.0" layoutY="188.0" mnemonicParsing="false" text="不跳牌，庄家连续14,闲13" />
+                  <Label layoutX="232.0" layoutY="189.0" text="平拿:" />
+                  <ComboBox fx:id="pingna" disable="true" layoutX="274.0" layoutY="185.0" prefHeight="22.0" prefWidth="105.0" />
+                  <CheckBox fx:id="nanbeihuhuandongdexiajiashibei" disable="true" layoutX="24.0" layoutY="215.0" mnemonicParsing="false" text="南北互换,东的下家是北" />
+                  <CheckBox fx:id="zijiazuosandunyousandun" layoutX="238.0" layoutY="215.0" mnemonicParsing="false" text="自家左3墩右3墩" />
+                  <CheckBox fx:id="qishourenyiliangdong" layoutX="24.0" layoutY="241.0" mnemonicParsing="false" text="起手任意两栋" />
+                  <CheckBox fx:id="renyiandongnapai" layoutX="238.0" layoutY="240.0" mnemonicParsing="false" text="任意按栋拿牌" />
+                  <CheckBox layoutX="417.0" layoutY="136.0" mnemonicParsing="false" text="先抓8后抓4" fx:id="xianzhuan8houzhuan4" />
+                  <CheckBox fx:id="meijuchongxuanquefang" layoutX="417.0" layoutY="161.0" mnemonicParsing="false" text="每局重选缺方" />
+                  <CheckBox fx:id="niezhuanimo" layoutX="417.0" layoutY="188.0" mnemonicParsing="false" text="逆拿(摸)牌" />
+                  <CheckBox fx:id="zhuapai_123" layoutX="417.0" layoutY="215.0" mnemonicParsing="false" text="一二三" />
+                  <CheckBox fx:id="zhuapai321" layoutX="417.0" layoutY="240.0" mnemonicParsing="false" text="三二一" />
+                  <CheckBox fx:id="sicengsandun" layoutX="24.0" layoutY="264.0" mnemonicParsing="false" text="四层三墩" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="128.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="7.0" text="花牌" />
+                  <Label layoutX="22.0" layoutY="28.0" text="杠法:" />
+                  <ComboBox fx:id="gangfa" layoutX="60.0" layoutY="24.0" prefHeight="22.0" prefWidth="285.0" />
+                  <CheckBox fx:id="zixuanhuapai" layoutX="24.0" layoutY="53.0" mnemonicParsing="false" text="自选花牌(非花牌当花)" />
+                  <CheckBox fx:id="anhuiganghua" disable="true" layoutX="236.0" layoutY="53.0" mnemonicParsing="false" text="安徽杠花(首轮)" />
+                  <CheckBox fx:id="shoupaibuxianshihuapai" disable="true" layoutX="24.0" layoutY="76.0" mnemonicParsing="false" text="手牌不显示花牌" />
+                  <CheckBox fx:id="yucepaibuxianshihuapai"  layoutX="236.0" layoutY="76.0" mnemonicParsing="false" text="预测牌不显示花牌" />
+                  <CheckBox fx:id="anqingmajiangdahua" disable="true" layoutX="428.0" layoutY="68.0" mnemonicParsing="false" text="安庆麻将打花" />
+                  <CheckBox fx:id="huapaikepang_foushanmajiang" layoutX="24.0" layoutY="100.0" mnemonicParsing="false" text="花牌可碰(佛山麻将)" />
+                  <Label layoutX="428.0" layoutY="103.0" text="杠花:" />
+                  <ComboBox fx:id="ganghua" layoutX="463.0" layoutY="99.0" prefHeight="22.0" prefWidth="117.0" />
+                  <CheckBox fx:id="huapaidaiticaishengpai_foushanmajiang" layoutX="236.0" layoutY="100.0" mnemonicParsing="false" text="花牌代替财神牌(佛山140)" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="59.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="7.0" text="扣牌" />
+                  <CheckBox fx:id="diyishou" disable="true" layoutX="23.0" layoutY="30.0" mnemonicParsing="false" text="第一手" />
+                  <CheckBox fx:id="diershou" disable="true" layoutX="137.0" layoutY="30.0" mnemonicParsing="false" text="第二手" />
+                  <CheckBox fx:id="disanshou" disable="true" layoutX="243.0" layoutY="30.0" mnemonicParsing="false" text="第三手" />
+                  <CheckBox fx:id="zixuankoupai" layoutX="502.0" layoutY="30.0" mnemonicParsing="false" text="自选扣牌" />
+                  <CheckBox fx:id="zuihouyizhang" layoutX="343.0" layoutY="30.0" mnemonicParsing="false" text="最后一张" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="121.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="7.0" text="其它" />
+                  <Label layoutX="23.0" layoutY="31.0" text="界面布局:" />
+                  <ComboBox fx:id="jiemianbuju" disable="true" layoutX="75.0" layoutY="27.0" prefHeight="22.0" prefWidth="90.0" />
+                  <ColorPicker fx:id="zidingyibeijingyanse" layoutX="252.0" layoutY="27.0" promptText="自定义背景颜色" />
+                  <CheckBox fx:id="shengyingtishi" disable="true" layoutX="445.0" layoutY="30.0" mnemonicParsing="false" text="声音提示" />
+                  <Label layoutX="23.0" layoutY="64.0" text="出牌显示:" />
+                  <ComboBox fx:id="chupaixianshi" layoutX="75.0" layoutY="60.0" prefHeight="22.0" prefWidth="90.0" />
+                  <CheckBox fx:id="zidongjietu" disable="true" layoutX="252.0" layoutY="63.0" mnemonicParsing="false" text="自动截图" />
+                  <CheckBox fx:id="jianpancaozuomoshi" disable="true" layoutX="23.0" layoutY="92.0" mnemonicParsing="false" text="键盘操作模式" />
+                  <CheckBox fx:id="zhuomianbuxuanzhuan" disable="true" layoutX="252.0" layoutY="92.0" mnemonicParsing="false" text="桌面牌不旋转" />
+               </children>
+            </AnchorPane>
+         </children></VBox>
+      <VBox layoutX="600.0" layoutY="-1.0" prefHeight="700.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="267.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="14.0" text="打牌" />
+                  <CheckBox fx:id="pangpai" layoutX="22.0" layoutY="41.0" mnemonicParsing="false" text="碰牌" />
+                  <CheckBox fx:id="chipai" layoutX="114.0" layoutY="41.0" mnemonicParsing="false" text="吃牌" />
+                  <CheckBox fx:id="danzhuangkechi" disable="true" layoutX="202.0" layoutY="41.0" mnemonicParsing="false" text="单张可吃" />
+                  <CheckBox fx:id="chisanfangpai" layoutX="322.0" layoutY="41.0" mnemonicParsing="false" text="吃三方牌" />
+                  <CheckBox fx:id="gangshouzhongpai" layoutX="465.0" layoutY="41.0" mnemonicParsing="false" text="杠手中牌" />
+                  <CheckBox fx:id="angang" layoutX="22.0" layoutY="68.0" mnemonicParsing="false" text="暗杠" />
+                  <CheckBox fx:id="minggang" layoutX="114.0" layoutY="68.0" mnemonicParsing="false" text="明杠" />
+                  <CheckBox fx:id="danzhangkegang" layoutX="202.0" layoutY="68.0" mnemonicParsing="false" text="单张可杠" />
+                  <CheckBox fx:id="koupai" disable="true" layoutX="322.0" layoutY="68.0" mnemonicParsing="false" text="扣牌(右击)" />
+                  <CheckBox fx:id="dongnanxibeikechikegang" layoutX="22.0" layoutY="92.0" mnemonicParsing="false" text="东南西北可吃可杠" />
+                  <CheckBox fx:id="zipaifengkai" disable="true" layoutX="221.0" layoutY="92.0" mnemonicParsing="false" text="字牌分开(西南北,中发白)" />
+                  <CheckBox fx:id="renyisangedanzhangzipai" disable="true" layoutX="431.0" layoutY="92.0" mnemonicParsing="false" text="任意三个单张字牌" />
+                  <CheckBox fx:id="leqing" layoutX="22.0" layoutY="116.0" mnemonicParsing="false" text="乐清(红中当花)" />
+                  <CheckBox fx:id="dongnanxibeizhongfabaigang" layoutX="221.0" layoutY="116.0" mnemonicParsing="false" text="东南西北(中发白)杠" />
+                  <CheckBox fx:id="pangjiang" disable="true" layoutX="454.0" layoutY="143.0" mnemonicParsing="false" text="碰将" />
+                  <CheckBox fx:id="yaojiyitongdangfengpai" disable="true" layoutX="22.0" layoutY="143.0" mnemonicParsing="false" text="幺鸡一筒当风牌(甘肃)" />
+                  <CheckBox fx:id="wugezipaigang" disable="true" layoutX="221.0" layoutY="143.0" mnemonicParsing="false" text="五个字牌杠(三个风牌两个箭牌,补两个)" />
+                  <CheckBox fx:id="yaojiugang" layoutX="22.0" layoutY="192.0" mnemonicParsing="false" text="幺九杠" />
+                  <CheckBox fx:id="yaojiugangshengyangbusangehuosige" disable="true" layoutX="299.0" layoutY="192.0" mnemonicParsing="false" text="幺九杠(沈阳补三个或四个)" />
+                  <CheckBox fx:id="zhucengnapai" disable="true" layoutX="22.0" layoutY="218.0" mnemonicParsing="false" text="逐层拿牌" />
+                  <CheckBox fx:id="yingchuanbufeng" disable="true" layoutX="299.0" layoutY="218.0" mnemonicParsing="false" text="银川补风" />
+                  <Label layoutX="420.0" layoutY="219.0" text="杠牌顺序:" />
+                  <ComboBox fx:id="gangpaishunxu" layoutX="476.0" layoutY="215.0" prefHeight="22.0" prefWidth="90.0" />
+                  <CheckBox fx:id="yaojiyitongdangzipai" layoutX="22.0" layoutY="167.0" mnemonicParsing="false" text="幺鸡一筒当字牌(甘肃)" />
+                  <CheckBox fx:id="rengyijiu" layoutX="433.0" layoutY="167.0" mnemonicParsing="false" text="扔一九" />
+                  <CheckBox fx:id="yaojiyitongdangzipaifengpai" layoutX="221.0" layoutY="167.0" mnemonicParsing="false" text="幺鸡一筒当字牌风牌(甘肃)" />
+                  <CheckBox fx:id="dongnanxibeizhongfabaigangqingdao" layoutX="431.0" layoutY="116.0" mnemonicParsing="false" text="东南西北(中发白)杠(青岛)" />
+                  <CheckBox fx:id="dongnanxibeizhongfabaishunzi" layoutX="123.0" layoutY="218.0" mnemonicParsing="false" text="东南西北(中发白)顺子" />
+                  <CheckBox fx:id="baoliupai" layoutX="490.0" layoutY="192.0" mnemonicParsing="false" text="保留手上牌" />
+                  <CheckBox fx:id="fengpaizipaisanzhangkegang" layoutX="465.0" layoutY="68.0" mnemonicParsing="false" text="风牌字牌三张可杠" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="139.0" prefWidth="602.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="7.0" text="胡牌" />
+                  <CheckBox fx:id="zhixianzimo" layoutX="22.0" layoutY="29.0" mnemonicParsing="false" text="只限自摸" />
+                  <CheckBox fx:id="qiangganghu" layoutX="136.0" layoutY="29.0" mnemonicParsing="false" text="抢杠胡" />
+                  <CheckBox fx:id="erwubajiang" layoutX="259.0" layoutY="29.0" mnemonicParsing="false" text="二五八将" />
+                  <CheckBox fx:id="queyimeng" layoutX="387.0" layoutY="29.0" mnemonicParsing="false" text="缺一门" />
+                  <CheckBox layoutX="501.0" layoutY="29.0" mnemonicParsing="false" text="血流成河" fx:id="xueliuchenghe" />
+                  <CheckBox fx:id="hupaikepang" layoutX="22.0" layoutY="52.0" mnemonicParsing="false" text="胡牌可碰" />
+                  <CheckBox fx:id="fangpaoxiajia" disable="true" layoutX="259.0" layoutY="52.0" mnemonicParsing="false" text="放炮下家" />
+                  <CheckBox fx:id="yipaoduoxiang" layoutX="387.0" layoutY="52.0" mnemonicParsing="false" text="一炮多响" />
+                  <CheckBox fx:id="hupaikemo" layoutX="22.0" layoutY="75.0" mnemonicParsing="false" text="胡牌可摸" />
+                  <CheckBox fx:id="buchibupangdapaitishi" disable="true" layoutX="136.0" layoutY="75.0" mnemonicParsing="false" text="不吃不碰打牌提示" />
+                  <CheckBox fx:id="lanpai" layoutX="259.0" layoutY="75.0" mnemonicParsing="false" text="烂牌" />
+                  <CheckBox fx:id="hupaikegang" layoutX="136.0" layoutY="52.0" mnemonicParsing="false" text="胡牌可杠" />
+                  <CheckBox layoutX="385.0" layoutY="75.0" mnemonicParsing="false" text="小七对" fx:id="xiaoqidui" />
+                  <CheckBox fx:id="bixuyou19zipaifengpairenyiyizhang" layoutX="497.0" layoutY="52.0" mnemonicParsing="false" text="幺九字牌风牌任意一张" />
+                  <CheckBox fx:id="pengpaihuozhezhongfabaidui" layoutX="497.0" layoutY="75.0" mnemonicParsing="false" text="碰牌或者中发白对" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="229.0" prefWidth="602.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="45.0" text="财神" />
+                  <CheckBox fx:id="zixuancaisheng" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" text="自选财神" />
+                  <CheckBox fx:id="houcaisheng" layoutX="137.0" layoutY="69.0" mnemonicParsing="false" text="后财神" />
+                  <CheckBox fx:id="shunmocaisheng" layoutX="232.0" layoutY="69.0" mnemonicParsing="false" text="顺摸财神" />
+                  <CheckBox fx:id="renyicaisheng" layoutX="373.0" layoutY="69.0" mnemonicParsing="false" text="任意财神" />
+                  <CheckBox fx:id="shengjicaisheng" layoutX="496.0" layoutY="69.0" mnemonicParsing="false" text="升级财神" />
+                  <CheckBox fx:id="zipaifengpaifenkaishengji" layoutX="485.0" layoutY="153.0" mnemonicParsing="false" text="东南西北/中发白分开升级" />
+                  <CheckBox fx:id="shuangcaisheng" layoutX="18.0" layoutY="96.0" mnemonicParsing="false" text="双财神:" />
+                  <ComboBox fx:id="shangcaisheng_combox" layoutX="87.0" layoutY="93.0" prefHeight="22.0" prefWidth="78.0" />
+                  <CheckBox fx:id="zhongjianpaizuohua" disable="true" layoutX="226.0" layoutY="96.0" mnemonicParsing="false" text="中间牌做花" />
+                  <CheckBox fx:id="shengjicaishengshihuapaijixu" disable="true" layoutX="372.0" layoutY="96.0" mnemonicParsing="false" text="升级财神是花牌继续升" />
+                  <CheckBox fx:id="daiticaishengpai" layoutX="14.0" layoutY="124.0" mnemonicParsing="false" />
+                  <ComboBox fx:id="daiticaishengpai_combox" layoutX="36.0" layoutY="121.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="140.0" layoutY="125.0" text="代替财神牌" />
+                  <CheckBox fx:id="andaitipaixianshi" layoutX="373.0" layoutY="124.0" mnemonicParsing="false" text="按代替牌显示" />
+                  <CheckBox fx:id="budaiticaishengzipai" disable="true" layoutX="485.0" layoutY="124.0" mnemonicParsing="false" text="不代替财神字牌" />
+                  <CheckBox fx:id="buhuahoumocaisheng" disable="true" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" text="补花后摸财神" />
+                  <CheckBox fx:id="caishengcanyuchipanggang" layoutX="182.0" layoutY="153.0" mnemonicParsing="false" text="财神参与吃碰杠(起飞)" />
+                  <CheckBox fx:id="caishengkedangang" layoutX="379.0" layoutY="153.0" mnemonicParsing="false" text="财神可单杠" />
+                  <CheckBox fx:id="jiaohuanpai" layoutX="15.0" layoutY="180.0" mnemonicParsing="false" text="交换牌(与拿牌位置倒数第三栋第一张)" />
+                  <CheckBox fx:id="fankaibaibanshenghuahuashengdong" layoutX="485.0" layoutY="180.0" mnemonicParsing="false" text="翻开白板升花，花升东" />
+                  <CheckBox fx:id="fankaidcaishengpaidanghua" disable="true" layoutX="370.0" layoutY="180.0" mnemonicParsing="false" text="翻开的财神牌当花" />
+                  <CheckBox fx:id="fankaidcaishengpaifangzuihouweizhi" disable="true" layoutX="17.0" layoutY="209.0" mnemonicParsing="false" text="翻开的财神牌放在最后位置" />
+                  <CheckBox fx:id="fankaishihuapaijixufan" disable="true" layoutX="379.0" layoutY="209.0" mnemonicParsing="false" text="翻开是花牌继续翻" />
+                  <CheckBox fx:id="daitipaibaoliuyuanpaizuoyong" disable="true" layoutX="226.0" layoutY="124.0" mnemonicParsing="false" text="代替牌保留原牌作用" />
+                  <CheckBox fx:id="caishenganzhengchangpaichanyuchangpanggang" layoutX="17.0" layoutY="233.0" mnemonicParsing="false" text="财神按正常牌参与吃碰杠" />
+                  <CheckBox fx:id="zhuapaihouxuancaisheng" layoutX="197.0" layoutY="233.0" mnemonicParsing="false" text="抓牌后选财神" />
+                  <CheckBox fx:id="juedicaisheng" layoutX="215.0" layoutY="209.0" mnemonicParsing="false" text="掘地财神" />
+                  <CheckBox fx:id="fankaidepaibuzuocaisheng" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" text="翻开的牌不做财神" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="买马" />
+                  <CheckBox layoutX="14.0" layoutY="46.0" mnemonicParsing="false" text="先买马后定庄" fx:id="xianmaimahoudingzhuang" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="1200.0" prefHeight="700.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="456.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="快捷方式" />
+                  <Label layoutX="14.0" layoutY="41.0" text="获取数据:" />
+                  <ComboBox fx:id="huoqushuju" disable="true" layoutX="79.0" layoutY="37.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="71.0" text="过牌:" />
+                  <ComboBox fx:id="guopai" layoutX="79.0" layoutY="67.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="14.0" layoutY="97.0" text="循环过牌:" />
+                  <ComboBox layoutX="79.0" layoutY="93.0" prefHeight="22.0" prefWidth="102.0" fx:id="xunhuanguopai" />
+                  <Label layoutX="38.0" layoutY="128.0" text="过栋:" />
+                  <ComboBox fx:id="guodong" layoutX="79.0" layoutY="124.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="20.0" layoutY="159.0" text="看出牌:" />
+                  <ComboBox fx:id="kanchupai" disable="true" layoutX="79.0" layoutY="155.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="187.0" text="摸牌:" />
+                  <ComboBox fx:id="mopai" layoutX="79.0" layoutY="183.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="214.0" text="吃牌:" />
+                  <ComboBox fx:id="chipai_kjj" disable="true" layoutX="79.0" layoutY="210.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="245.0" text="杠牌:" />
+                  <ComboBox fx:id="gangpai" layoutX="79.0" layoutY="241.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="276.0" text="碰牌:" />
+                  <ComboBox fx:id="pangpai_kjj" layoutX="79.0" layoutY="272.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="38.0" layoutY="308.0" text="撤销:" />
+                  <ComboBox fx:id="chexiao" layoutX="79.0" layoutY="304.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="20.0" layoutY="343.0" text="重选庄:" />
+                  <ComboBox fx:id="chongxuanzhuang" disable="true" layoutX="79.0" layoutY="339.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="14.0" layoutY="370.0" text="鼠标右击:" />
+                  <ComboBox fx:id="shubiaoyouji" layoutX="79.0" layoutY="366.0" prefHeight="22.0" prefWidth="102.0" />
+                  <Label layoutX="14.0" layoutY="395.0" text="强制退出:" />
+                  <Label layoutX="70.0" layoutY="395.0" text="双击预测牌" />
+                  <Label layoutX="14.0" layoutY="419.0" text="调整大小:" />
+                  <Label layoutX="70.0" layoutY="419.0" text="双击空白处" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="244.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="leqingmajiang" disable="true" layoutX="48.0" layoutY="14.0" mnemonicParsing="false" text="乐清麻将" />
+                  <CheckBox fx:id="guangxi152" layoutX="48.0" layoutY="40.0" mnemonicParsing="false" text="广西152" />
+                  <CheckBox disable="true" layoutX="48.0" layoutY="69.0" mnemonicParsing="false" text="仙麻将" fx:id="xianmajiang" />
+                  <CheckBox fx:id="yuhuanwahua" disable="true" layoutX="48.0" layoutY="99.0" mnemonicParsing="false" text="玉环挖花" />
+                  <CheckBox fx:id="wenchengmajiang" disable="true" layoutX="48.0" layoutY="130.0" mnemonicParsing="false" text="文城麻将" />
+                  <CheckBox fx:id="wenlingmajiang" disable="true" layoutX="48.0" layoutY="160.0" mnemonicParsing="false" text="温岭麻将" />
+                  <Label layoutX="20.0" layoutY="216.0" text="严禁用于赌博等非法用途" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

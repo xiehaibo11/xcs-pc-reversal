@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1548.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quesheng.controller.MainController">
+   <children>
+
+      <ScrollPane prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <HBox fx:id="top" alignment="CENTER" prefHeight="30.0" spacing="5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#zhihuitishiConfig" text="指挥提示" />
+                    <Button fx:id="guize_btn" mnemonicParsing="false" text="规则" />
+                    <Button mnemonicParsing="false" text="旋转" fx:id="xuanzhuan_btn" />
+                    <ComboBox fx:id="guo_combobox" prefHeight="22.0" prefWidth="80.0" />
+                    <ComboBox fx:id="duidiao_combobox" prefHeight="22.0" prefWidth="70.0" />
+                    <ComboBox fx:id="dong_combobox" prefHeight="22.0" prefWidth="60.0" />
+                    <ComboBox fx:id="zhang_combobox" prefHeight="22.0" prefWidth="60.0" />
+                    <ComboBox fx:id="dongban_combobox" prefHeight="22.0" prefWidth="70.0" />
+                    <MenuButton mnemonicParsing="false" text="买马">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#maimawu" text="无" />
+                            <MenuItem mnemonicParsing="false" onAction="#maimadong" text="东" />
+                            <MenuItem mnemonicParsing="false" onAction="#maimanan" text="南" />
+                            <MenuItem mnemonicParsing="false" onAction="#maimaxi" text="西" />
+                            <MenuItem mnemonicParsing="false" onAction="#maimabei" text="北" />
+                        </items>
+                    </MenuButton>
+                    <Button fx:id="jihuo_btn" mnemonicParsing="false" text="激活" />
+                    <Button fx:id="huoqu_btn" mnemonicParsing="false" text="获取" />
+                    <Button fx:id="fenxi_btn" mnemonicParsing="false" text="分析" />
+                    <MenuButton mnemonicParsing="false" text="测试">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi108" text="108张" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi136" text="136张" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi144" text="144张" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi72sifeng" text="72张四方" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi72sanfeng" text="72张三方" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshi112" text="112张" />
+                            <MenuItem mnemonicParsing="false" onAction="#ceshiguangxi152" text="广西152" />
+                        <MenuItem mnemonicParsing="false" onAction="#ceshi90" text="90张" />
+                        </items>
+                    </MenuButton>
+                    <Button fx:id="chexiao_btn" mnemonicParsing="false" text="撤销" />
+                    <Button fx:id="chongxuanzhuang_btn" mnemonicParsing="false" text="重选庄" />
+                    <Button fx:id="jiuzhenghuanpai_btn"  mnemonicParsing="false" style="-fx-background-color: red;" text="纠正换牌" />
+                    <Button fx:id="huanyuan_btn" mnemonicParsing="false" text="还原" />
+                    <Button fx:id="jieshu_btn" mnemonicParsing="false" text="结束" />
+                    <Button fx:id="changepassword_btn" mnemonicParsing="false" text="修改密码" />
+                    <Button fx:id="clean_btn" mnemonicParsing="false" text="重置软件（清空缓存）" />
+                    <HBox alignment="CENTER_RIGHT">
+                        <children>
+                            <!--<Label alignment="CENTER" contentDisplay="RIGHT" style="-fx-padding: 0px 0px 0px 10px;" text="局唯一ID:" visible="false">-->
+                            <!--</Label>-->
+                            <!--<Label fx:id="zhuo_id" text="" visible="false" />-->
+                            <Label style="-fx-padding: 0px 0px 0px 10px;" text="牌总数:">
+                            </Label>
+                            <Label fx:id="pai_count" prefWidth="30.0" text="0" />
+                            <Label style="-fx-padding: 0px 0px 0px 10px;" text="东:" />
+                            <Label fx:id="dong_count" prefWidth="20.0" text="0" />
+                            <Label style="-fx-padding: 0px 0px 0px 10px;" text="南:" />
+                            <Label fx:id="nan_count" prefWidth="20.0" text="0" />
+                            <Label style="-fx-padding: 0px 0px 0px 10px;" text="西:" />
+                            <Label prefWidth="20.0" text="0" fx:id="xi_count" />
+                            <Label style="-fx-padding: 0px 0px 0px 10px;" text="北:" />
+                            <Label fx:id="bei_count" prefWidth="20.0" text="0" />
+                        </children>
+                    </HBox>
+                </children>
+            </HBox>
+        </content>
+      </ScrollPane>
+    <HBox alignment="CENTER_RIGHT" layoutX="-1.0" prefHeight="30.0" prefWidth="100.0" spacing="10" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <Button fx:id="min_btn" mnemonicParsing="false" text="_">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip anchorLocation="WINDOW_TOP_LEFT" text="最小化" />
+               </tooltip>
+             </Button>
+             <ImageView fx:id="max_btn" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@image/max.png" />
+                 </image>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ImageView>
+            <Button fx:id="out_btn" mnemonicParsing="false" text="X" textAlignment="CENTER" textFill="#e80808" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="退出游戏" />
+               </tooltip>
+            </Button>
+         </children>
+    </HBox>
+      <AnchorPane fx:id="main_panel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+   </children>
+   <stylesheets>
+      <URL value="@Main.css" />
+   </stylesheets>
+</AnchorPane>

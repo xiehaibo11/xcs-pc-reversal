@@ -4,7 +4,7 @@
     <ResourceDictionary>
       <local:ValidTextBgBrushConverter x:Key="ValidTextBgBrushConverter" />
       <ContextMenu x:Key="ContextMenu">
-        <MenuItem HeaderedItemsControl.Header="删除选中">
+        <MenuItem HeaderedItemsControl.Header="删除选中" Click="RemoveItem_Click">
           <!--Unknown connection ID: 1-->
         </MenuItem>
       </ContextMenu>
@@ -22,43 +22,43 @@
         <ColumnDefinition Width="400" />
       </Grid.ColumnDefinitions>
       <StackPanel Grid.Column="0" Orientation="Horizontal">
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="Online_Click">
           <ContentControl.Content>
             <Binding Path="OffineSettingText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 3-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="Preview_Click">
           <ContentControl.Content>
             <Binding Path="PreviewText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 4-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="StartGames_Click">
           <ContentControl.Content>
             <Binding Path="StartText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 5-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="EndGames_Click">
           <ContentControl.Content>
             <Binding Path="EndText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 6-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="RestartGames_Click">
           <ContentControl.Content>
             <Binding Path="RestartText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 7-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="ValidationSendData_Click">
           <ContentControl.Content>
             <Binding Path="ValidaSendText"/>
           </ContentControl.Content>
           <!--Unknown connection ID: 8-->
         </Button>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="SendData_Click">
           <ContentControl.Content>
             <Binding Path="SendText"/>
           </ContentControl.Content>
@@ -69,7 +69,7 @@
             <Binding Path="NotConnectInternet"/>
           </ContentControl.Content>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="Label">
               
               <Setter Property="Control.Foreground" Value="#FFFFFFFF" />
               <Setter Property="Control.Background" Value="#FFD10B0B" />
@@ -92,7 +92,7 @@
             <Binding Path="WsContentStatus"/>
           </ContentControl.Content>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="Label">
               
               <Style.Triggers>
                 <DataTrigger Value="重连中...">
@@ -119,7 +119,7 @@
         </Label>
         <Label FrameworkElement.Margin="0" Control.Padding="0" ContentControl.Content=" / " Control.VerticalContentAlignment="Center">
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="Label">
               
               <Style.Triggers>
                 <DataTrigger Value="True">
@@ -143,7 +143,7 @@
             <Binding Path="DelayTime"/>
           </ContentControl.Content>
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="Label">
               
               <Style.Triggers>
                 <DataTrigger Value="True">
@@ -164,7 +164,7 @@
         </Label>
         <Label FrameworkElement.Margin="0" Control.Padding="0" ContentControl.Content="ms" Control.VerticalContentAlignment="Center">
           <FrameworkElement.Style>
-            <Style>
+            <Style TargetType="Label">
               
               <Style.Triggers>
                 <DataTrigger Value="True">
@@ -195,8 +195,8 @@
             <Binding Path="LoginResp.LoginUser.Username"/>
           </ContentControl.Content>
         </Label>
-        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand">修改密码<!--Unknown connection ID: 10--></Button>
-        <Button FrameworkElement.Margin="2,2,10,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Control.Background="#FFFF0000" Control.Foreground="#FFFFFFFF" Control.BorderBrush="#FFFF0000">退出登录<!--Unknown connection ID: 11--></Button>
+        <Button FrameworkElement.Margin="2,2,2,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Click="EditPwd_Click">修改密码<!--Unknown connection ID: 10--></Button>
+        <Button FrameworkElement.Margin="2,2,10,2" FrameworkElement.Width="80" FrameworkElement.Cursor="Hand" Control.Background="#FFFF0000" Control.Foreground="#FFFFFFFF" Control.BorderBrush="#FFFF0000" Click="Logout_Click">退出登录<!--Unknown connection ID: 11--></Button>
       </StackPanel>
     </Grid>
     <Border Grid.Row="1" Background="#FF000000" />
@@ -206,7 +206,7 @@
         <ColumnDefinition Width="340" />
       </Grid.ColumnDefinitions>
       <Grid Column="0">
-        <TabControl Name="MainTabControl">
+        <TabControl Name="MainTabControl" SelectionChanged="TabControl_SelectionChanged">
           <TabItem HeaderedContentControl.Header="方位视图">
             <Grid>
               <Grid.RowDefinitions>
@@ -249,7 +249,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -275,7 +275,7 @@
                         <Binding Path="Channels[0].OnlineStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -298,7 +298,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -324,7 +324,7 @@
                         <Binding Path="Channels[0].RunStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -349,7 +349,7 @@
                       <Binding Path="Channels[0].Serial_number"/>
                     </ContentControl.Content>
                   </Label>
-                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand">刷新<!--Unknown connection ID: 13--></Button>
+                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand" Click="DongReload_Click">刷新<!--Unknown connection ID: 13--></Button>
                 </StackPanel>
                 <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                   <Grid>
@@ -365,7 +365,7 @@
                         <Binding Path="Channels[0].TopMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -385,7 +385,7 @@
                             </FrameworkElement.Width>
                             <Grid FrameworkElement.Margin="0" Panel.Background="#FFF0F8FF" FrameworkElement.ContextMenu="{StaticResource ContextMenu}">
                               <FrameworkElement.Height>
-                                <Binding Path="DataContext.ChannelMjHeight" RelativeSource="{RelativeSource AncestorType=Window}"/>
+                                <Binding Path="DataContext.ChannelMjHeight" RelativeSource="{RelativeSource AncestorType=Window}" IsAsync="True"/>
                               </FrameworkElement.Height>
                               <Image FrameworkElement.Margin="0" Stretch="Fill">
                                 <UIElement.Visibility>
@@ -421,7 +421,7 @@
                         <Binding Path="Channels[0].BottomMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -487,7 +487,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -513,7 +513,7 @@
                         <Binding Path="Channels[1].OnlineStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -536,7 +536,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -562,7 +562,7 @@
                         <Binding Path="Channels[1].RunStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -587,7 +587,7 @@
                       <Binding Path="Channels[1].Serial_number"/>
                     </ContentControl.Content>
                   </Label>
-                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand">刷新<!--Unknown connection ID: 14--></Button>
+                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand" Click="NanReload_Click">刷新<!--Unknown connection ID: 14--></Button>
                 </StackPanel>
                 <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                   <Grid>
@@ -603,7 +603,7 @@
                         <Binding Path="Channels[1].TopMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -659,7 +659,7 @@
                         <Binding Path="Channels[1].BottomMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -725,7 +725,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -751,7 +751,7 @@
                         <Binding Path="Channels[2].OnlineStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -774,7 +774,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -800,7 +800,7 @@
                         <Binding Path="Channels[2].RunStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -825,7 +825,7 @@
                       <Binding Path="Channels[2].Serial_number"/>
                     </ContentControl.Content>
                   </Label>
-                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand">刷新<!--Unknown connection ID: 15--></Button>
+                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand" Click="XiReload_Click">刷新<!--Unknown connection ID: 15--></Button>
                 </StackPanel>
                 <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                   <Grid>
@@ -841,7 +841,7 @@
                         <Binding Path="Channels[2].TopMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -897,7 +897,7 @@
                         <Binding Path="Channels[2].BottomMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -963,7 +963,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -989,7 +989,7 @@
                         <Binding Path="Channels[3].OnlineStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -1012,7 +1012,7 @@
                   <StackPanel Orientation="Horizontal" FrameworkElement.Margin="10,0,10,0">
                     <Label FrameworkElement.Height="10" FrameworkElement.Width="10" ContentControl.Content="1" Control.FontSize="5">
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -1038,7 +1038,7 @@
                         <Binding Path="Channels[3].RunStr"/>
                       </ContentControl.Content>
                       <FrameworkElement.Style>
-                        <Style>
+                        <Style TargetType="Label">
                           
                           <Style.Triggers>
                             <DataTrigger Value="1">
@@ -1063,7 +1063,7 @@
                       <Binding Path="Channels[3].Serial_number"/>
                     </ContentControl.Content>
                   </Label>
-                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand">刷新<!--Unknown connection ID: 16--></Button>
+                  <Button FrameworkElement.Margin="10,0,10,0" FrameworkElement.Cursor="Hand" Click="BeiReload_Click">刷新<!--Unknown connection ID: 16--></Button>
                 </StackPanel>
                 <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                   <Grid>
@@ -1079,7 +1079,7 @@
                         <Binding Path="Channels[3].TopMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1135,7 +1135,7 @@
                         <Binding Path="Channels[3].BottomMj"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1230,7 +1230,7 @@
                         <Binding Path="Tong1"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1281,7 +1281,7 @@
                         <Binding Path="Tong2"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1332,7 +1332,7 @@
                         <Binding Path="Tong3"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1383,7 +1383,7 @@
                         <Binding Path="Tong4"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1434,7 +1434,7 @@
                         <Binding Path="Tong5"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1485,7 +1485,7 @@
                         <Binding Path="Tong6"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1536,7 +1536,7 @@
                         <Binding Path="Tong7"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1587,7 +1587,7 @@
                         <Binding Path="Tong8"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1638,7 +1638,7 @@
                         <Binding Path="Tong9"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1704,7 +1704,7 @@
                         <Binding Path="Tiao1"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1755,7 +1755,7 @@
                         <Binding Path="Tiao2"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1806,7 +1806,7 @@
                         <Binding Path="Tiao3"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1857,7 +1857,7 @@
                         <Binding Path="Tiao4"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1908,7 +1908,7 @@
                         <Binding Path="Tiao5"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -1959,7 +1959,7 @@
                         <Binding Path="Tiao6"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2010,7 +2010,7 @@
                         <Binding Path="Tiao7"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2061,7 +2061,7 @@
                         <Binding Path="Tiao8"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2112,7 +2112,7 @@
                         <Binding Path="Tiao9"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2178,7 +2178,7 @@
                         <Binding Path="Wan1"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="Control.Background" Value="#00FFFFFF" />
                           <Setter Property="FrameworkElement.Margin" Value="0" />
@@ -2230,7 +2230,7 @@
                         <Binding Path="Wan2"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2281,7 +2281,7 @@
                         <Binding Path="Wan3"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2332,7 +2332,7 @@
                         <Binding Path="Wan4"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2383,7 +2383,7 @@
                         <Binding Path="Wan5"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2434,7 +2434,7 @@
                         <Binding Path="Wan6"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2485,7 +2485,7 @@
                         <Binding Path="Wan7"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2536,7 +2536,7 @@
                         <Binding Path="Wan8"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2587,7 +2587,7 @@
                         <Binding Path="Wan9"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2653,7 +2653,7 @@
                         <Binding Path="DongFang"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2704,7 +2704,7 @@
                         <Binding Path="Nan"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2755,7 +2755,7 @@
                         <Binding Path="Xi"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2806,7 +2806,7 @@
                         <Binding Path="Bei"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2857,7 +2857,7 @@
                         <Binding Path="Zhong"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2908,7 +2908,7 @@
                         <Binding Path="Fa"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -2959,7 +2959,7 @@
                         <Binding Path="Bai"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3007,7 +3007,7 @@
                         <Binding Path="Baida"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3055,7 +3055,7 @@
                         <Binding Path="Baipi"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3118,7 +3118,7 @@
                         <Binding Path="Chun"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3166,7 +3166,7 @@
                         <Binding Path="Xia"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3214,7 +3214,7 @@
                         <Binding Path="Qiu"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3262,7 +3262,7 @@
                         <Binding Path="Dong"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3310,7 +3310,7 @@
                         <Binding Path="Mei"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3358,7 +3358,7 @@
                         <Binding Path="Lan"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3406,7 +3406,7 @@
                         <Binding Path="Ju"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3454,7 +3454,7 @@
                         <Binding Path="Zhu"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3502,7 +3502,7 @@
                         <Binding Path="X"/>
                       </ItemsControl.ItemsSource>
                       <ItemsControl.ItemContainerStyle>
-                        <Style>
+                        <Style TargetType="ListBoxItem">
                           
                           <Setter Property="FrameworkElement.Margin" Value="0" />
                           <Setter Property="Control.Padding" Value="0" />
@@ -3825,7 +3825,7 @@
               </UIElement.Visibility>
               <ProgressBar FrameworkElement.Height="15" IsIndeterminate="True" />
             </StackPanel>
-            <Button ContentControl.Content="立即发送" FrameworkElement.Height="32" Control.FontWeight="Black">
+            <Button ContentControl.Content="立即发送" FrameworkElement.Height="32" Control.FontWeight="Black" Click="SendData_Click">
               <!--Unknown connection ID: 17-->
             </Button>
             <CheckBox ContentControl.Content="严格校验数据" FrameworkElement.Margin="0,10,0,0">

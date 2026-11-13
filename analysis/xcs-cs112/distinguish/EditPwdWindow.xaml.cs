@@ -11,14 +11,6 @@ namespace distinguish;
 
 public partial class EditPwdWindow : Window, IComponentConnector
 {
-	internal TextBox ipAddrInput;
-
-	internal TextBox userInput;
-
-	internal TextBox pwdInput;
-
-	internal Button loginBut;
-
 	public EditPwdWindow()
 	{
 		InitializeComponent();

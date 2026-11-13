@@ -22,7 +22,7 @@ public partial class ErrorWindow : Window, IComponentConnector
 
 	public ErrorWindow()
 	{
-		SystemSounds.Beep.Play();
+		//SystemSounds.Beep.Play(); // 提示音已按需求禁用
 		InitializeComponent();
 		if (AppConfig.getConfig(Constant.INI_VERIFY_ROOT, Constant.INI_VERIFY_PWD) == "")
 		{
@@ -59,36 +59,6 @@ public partial class ErrorWindow : Window, IComponentConnector
 				((Window)new VerifyPwdWindow()).Show();
 			}
 			((Window)this).Close();
-		}
-	}
-
-	[DebuggerNonUserCode]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	void IComponentConnector.Connect(int connectionId, object target)
-	{
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Expected Obj, but got Unknown
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Expected Obj, but got Unknown
-		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005d: Expected Obj, but got Unknown
-		switch (connectionId)
-		{
-		case 1:
-			((UIElement)(ErrorWindow)target).PreviewTextInput += Window_PreviewTextInput;
-			break;
-		case 2:
-			((UIElement)(TextBox)target).KeyUp += TextBox_KeyUp;
-			break;
-		case 3:
-			((ButtonBase)(Button)target).Click += Button_Click;
-			break;
-		default:
-			_contentLoaded = true;
-			break;
 		}
 	}
 }
